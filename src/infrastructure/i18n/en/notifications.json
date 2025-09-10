@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Your balance was adjusted",
+      "message": "Your balance was adjusted with {amount} by {masterName}."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Your bonus has arrived",
+      "message": "You have received {amount} USD from the {bonusName}."
+    },
+    "rollover_started": {
+      "title": "You have earned a bonus! Complete the rollover to unlock {amount} USD",
+      "message": "Congrats on your {bonusName}! Complete the rollover requirements of {rollover} to unlock your {amount} USD reward. Start now and make it yours!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Deposit successful",
+      "message": "Your deposit of {amount} has been successful."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Topup request created",
+      "message": "New topup request for {amount} tokens was created."
+    },
+    "approved": {
+      "title": "Topup request approved",
+      "message": "Your topup request for {amount} tokens was approved."
+    },
+    "rejected": {
+      "title": "Topup request rejected",
+      "message": "Your topup request for {amount} tokens was rejected."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Settlement request created",
+      "message": "You have a new settlement request for {amount} tokens."
+    },
+    "created_by_supermaster": {
+      "title": "Settlement request created",
+      "message": "The SuperMaster {superMasterName} initiated a new settlement request for {amount} tokens."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Withdrawal request created",
+      "message": "A withdrawal request of {amount} has been created."
+    },
+    "approved": {
+      "title": "Withdrawal request approved",
+      "message": "A withdrawal request of {amount} has been approved."
+    },
+    "completed": {
+      "title": "Withdrawal request completed",
+      "message": "Your withdrawal request of {amount} has been completed."
+    },
+    "rejected": {
+      "title": "Withdrawal request rejected",
+      "message": "Your withdrawal request of {amount} has been rejected."
+    },
+    "failed": {
+      "title": "Withdrawal request failed",
+      "message": "A withdrawal request of {amount} has failed to be sent."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Tron withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDT. Current USDT balance is {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Tron withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDC. Current USDC balance is {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Tron withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} TRX. Current TRX balance is {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Solana withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDT. Current USDT balance is {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Solana withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDC. Current USDC balance is {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Solana withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} SOL. Current SOL balance is {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Ethereum withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDT. Current USDT balance is {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Ethereum withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} USDC. Current USDC balance is {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Ethereum withdrawal wallet balance warning",
+      "message": "Withdrawal wallet balance is below {limit} ETH. Current ETH balance is {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Your poker code has arrived",
+      "message": "You have received the following poker code: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "You have received a tip",
+      "message": "You have received {amount} USD from {sender}."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "You have received a reward",
+      "message": "You have received a {amount} USD reward - {description}."
+    }
+  }
+}

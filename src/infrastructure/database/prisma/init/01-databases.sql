@@ -1,0 +1,1 @@
+ALTER USER royalstakes_user CREATEDB;

@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Bakiyeniz güncellendi",
+      "message": "Bakiyeniz {masterName} tarafından {amount} olarak ayarlandı."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Bonusunuz geldi",
+      "message": "{bonusName}'den {amount} USD aldınız."
+    },
+    "rollover_started": {
+      "title": "Bir bonus kazandınız! {amount} USD'yi açmak için rollover'ı tamamlayın",
+      "message": "{bonusName} için tebrikler! {amount} USD'lik ödülünüzü açmak için {rollover} rollover şartlarını tamamlayın. Hemen başlayın ve sahip olun!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Depo yapıldı",
+      "message": "{amount} depo yapıldı."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Yükleme talebi oluşturuldu",
+      "message": "{amount} jeton için yeni bir yükleme talebi oluşturuldu."
+    },
+    "approved": {
+      "title": "Yükleme talebi onaylandı",
+      "message": "{amount} jeton için yükleme talebiniz onaylandı."
+    },
+    "rejected": {
+      "title": "Yükleme talebi reddedildi",
+      "message": "{amount} jeton için yükleme talebiniz reddedildi."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Mutabakat talebi oluşturuldu",
+      "message": "{amount} jeton için yeni bir mutabakat talebiniz var."
+    },
+    "created_by_supermaster": {
+      "title": "Mutabakat talebi oluşturuldu",
+      "message": "SuperMaster {superMasterName}, {amount} jeton için yeni bir mutabakat talebi başlattı."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Para çekme talebi oluşturuldu",
+      "message": "{amount} tutarında bir para çekme talebi oluşturuldu."
+    },
+    "approved": {
+      "title": "Para çekme talebi onaylandı",
+      "message": "{amount} tutarında bir para çekme talebi onaylandı."
+    },
+    "completed": {
+      "title": "Para çekme işlemi tamamlandı",
+      "message": "{amount} tutarındaki para çekme işleminiz tamamlandı."
+    },
+    "rejected": {
+      "title": "Para çekme talebi reddedildi",
+      "message": "{amount} tutarındaki para çekme talebiniz reddedildi."
+    },
+    "failed": {
+      "title": "Para çekme talebi başarısız oldu",
+      "message": "{amount} tutarındaki para çekme talebi gönderilemedi."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Tron çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDT'nin altına düştü. Güncel USDT bakiyesi: {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Tron çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDC'nin altına düştü. Güncel USDC bakiyesi: {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Tron çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} TRX'in altına düştü. Güncel TRX bakiyesi: {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Solana çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDT'nin altına düştü. Güncel USDT bakiyesi: {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Solana çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDC'nin altına düştü. Güncel USDC bakiyesi: {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Solana çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} SOL'un altına düştü. Güncel SOL bakiyesi: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Ethereum çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDT'nin altına düştü. Güncel USDT bakiyesi: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Ethereum çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} USDC'nin altına düştü. Güncel USDC bakiyesi: {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Ethereum çekim cüzdanı bakiye uyarısı",
+      "message": "Çekim cüzdanı bakiyesi {limit} ETH'nin altına düştü. Güncel ETH bakiyesi: {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Poker kodunuz geldi",
+      "message": "Aşağıdaki poker kodunu aldınız: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Bahşiş aldınız",
+      "message": "{sender} tarafından {amount} USD bahşiş aldınız."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Ödül aldınız",
+      "message": "{amount} USD ödül - {description}."
+    }
+  }
+}

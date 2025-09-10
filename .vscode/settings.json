@@ -1,0 +1,37 @@
+{
+  "cSpell.words": [
+    "arbitrum",
+    "cashout",
+    "dtos",
+    "FUNGAMESS",
+    "hdel",
+    "hget",
+    "hset",
+    "jwtid",
+    "luxon",
+    "MAXBET",
+    "maxexposurepervip",
+    "MAXNUMBERUSERS",
+    "nrusers",
+    "NUMBERUSERS",
+    "RABBITMQ",
+    "redlock",
+    "SENDGRID",
+    "Solana",
+    "songkeys",
+    "Sportbook",
+    "SUPERMASTER",
+    "totalwin",
+    "TRONSCAN",
+    "volumeplayed"
+  ],
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "editor.tabSize": 2,
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  }
+}

@@ -1,0 +1,2466 @@
+{
+  "slotegrator-sportsbook": [
+      {
+          "request": {
+              "id": "ndxbka0bnst6470oynnovv4l",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10000
+          }
+      },
+      {
+          "request": {
+              "id": "aa2l689qu1vvcb1mmy7fyaxq",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 88.38,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3832-e508-1904-39d5-800020000000",
+                  "betslip": {
+                      "uuid": "673f3832-e508-1904-39d5-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 88.38,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3832-e530-19e8-3938-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "23bf4a2f-a3a8-46f5-9977-e73f6d2a7b22",
+              "balance": 9911.62
+          }
+      },
+      {
+          "request": {
+              "id": "owjf7su2eftbp3fl17k4z08p",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 101.06,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3832-e508-1904-39d5-800020000000",
+                  "betslip": {
+                      "uuid": "673f3832-e508-1904-39d5-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 88.38,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3832-9a5c-1c61-333a-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "99c70726-d6c6-429e-a673-faa23d115479",
+              "balance": 10012.68
+          }
+      },
+      {
+          "request": {
+              "id": "u5ai93r0lzcg89lv47sdyzhs",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3832-e508-1904-39d5-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10012.68,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "ddrsnv7l4w2kmn7yhzhjsc00",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.68
+          }
+      },
+      {
+          "request": {
+              "id": "s63ybwf48r3cjibgw5rvcf2n",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 76.66,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3833-5ac7-1c42-3285-800020000000",
+                  "betslip": {
+                      "uuid": "673f3833-5ac7-1c42-3285-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 76.66,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3833-5adf-1c28-3614-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "0c2938c9-27b4-463b-9e2e-aa59440e2fd9",
+              "balance": 9936.02
+          }
+      },
+      {
+          "request": {
+              "id": "nim7zmhicmsedwo0xexgrud6",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 86.95,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3833-5ac7-1c42-3285-800020000000",
+                  "betslip": {
+                      "uuid": "673f3833-5ac7-1c42-3285-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 76.66,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3833-edce-1cc6-365f-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "96f287a4-1e1e-44c3-96c8-7f5dfb74773c",
+              "balance": 10022.97
+          }
+      },
+      {
+          "request": {
+              "id": "u6dfctsyft3hhgfrhnfufsww",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3833-5ac7-1c42-3285-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10022.97,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "h6jhwxpkdust9gx5iazsdqay",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3833-5ac7-1c42-3285-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10022.97,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "ji4uko0pu7p9i46qb22dxo3l",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10022.97
+          }
+      },
+      {
+          "request": {
+              "id": "va8qsiwml30lgjx4viina8qe",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 73.47,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3834-6c57-198f-3035-800020000000",
+                  "betslip": {
+                      "uuid": "673f3834-6c57-198f-3035-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 73.47,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3834-6c71-1910-37ce-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "20236bab-83cd-463c-93e6-a355f999c966",
+              "balance": 9949.5
+          }
+      },
+      {
+          "request": {
+              "id": "hfmnh8bpz3drxsp60ex7ythi",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 73.47,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3834-6c57-198f-3035-800020000000",
+                  "transaction_id": "673f3835-77ab-1788-323a-800010000002",
+                  "ref_transaction_id": "673f3834-6c71-1910-37ce-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "ae64d6e3-e6f2-4960-916d-1b0e2cc57c49",
+              "balance": 10022.97
+          }
+      },
+      {
+          "request": {
+              "id": "y225752fykno412anu6y2fcz",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10022.97
+          }
+      },
+      {
+          "request": {
+              "id": "m1ctkvbd4wzcuoogyafe33h7",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 39.26,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3835-a0cc-1fc8-3e8a-800020000000",
+                  "betslip": {
+                      "uuid": "673f3835-a0cc-1fc8-3e8a-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 39.26,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3835-a0e5-1f04-3b06-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "a5db53e7-647c-424d-8ad5-02a405044baa",
+              "balance": 9983.71
+          }
+      },
+      {
+          "request": {
+              "id": "ak3kdek7kg1fpxdt07s1xikh",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 35.33,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3835-a0cc-1fc8-3e8a-800020000000",
+                  "transaction_id": "673f3835-fa00-1dd4-390b-800010000002",
+                  "ref_transaction_id": "673f3835-a0e5-1f04-3b06-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "82c843f8-561d-446a-b556-e3b0b604ee4a",
+              "balance": 10019.04
+          }
+      },
+      {
+          "request": {
+              "id": "o40nocilz2uxk75hm7vtjvho",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10019.04
+          }
+      },
+      {
+          "request": {
+              "id": "q5ckx9n8w2cmvunny6c6ct2i",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 85.82,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3836-ce31-1b6b-3402-800020000000",
+                  "betslip": {
+                      "uuid": "673f3836-ce31-1b6b-3402-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 85.82,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3836-ce51-1bb3-3ea8-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "fe65f6cd-c398-42ed-b7b8-6832be6f5137",
+              "balance": 9933.22
+          }
+      },
+      {
+          "request": {
+              "id": "lh1gxa3s20g5d7q86uffvfc9",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 0,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3836-ce31-1b6b-3402-800020000000",
+                  "betslip": {
+                      "uuid": "673f3836-ce31-1b6b-3402-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 85.82,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3836-36a4-1cbe-33c0-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "88f15516-4654-42b9-a6c1-f048c503657c",
+              "balance": 9933.22
+          }
+      },
+      {
+          "request": {
+              "id": "xfbdz8dj6gqy2iajigki744x",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3836-ce31-1b6b-3402-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 9933.22,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "jjfexy9umwym8xxujvyruuj5",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9933.22
+          }
+      },
+      {
+          "request": {
+              "id": "ajqrk26dqas5m92ap5nko4la",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 8.3,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3837-24f4-1a27-3f41-800020000000",
+                  "betslip": {
+                      "uuid": "673f3837-24f4-1a27-3f41-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 8.3,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3837-2509-1ac8-3221-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "87472b18-c230-4bc8-8c54-6c44fe35a0e8",
+              "balance": 9924.92
+          }
+      },
+      {
+          "request": {
+              "id": "a66ssslz1aynp1ubgssyfxrb",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 81.15,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3837-24f4-1a27-3f41-800020000000",
+                  "betslip": {
+                      "uuid": "673f3837-24f4-1a27-3f41-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 8.3,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3837-6939-1b4f-3182-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "c6cbf357-37ae-4f4a-a1a9-661aa01a4e8a",
+              "balance": 10006.07
+          }
+      },
+      {
+          "request": {
+              "id": "drllw2u1f31jwkpsxcyao8yw",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3837-24f4-1a27-3f41-800020000000",
+                  "transaction_id": "673f3837-2844-1f0b-3506-800010000004",
+                  "bet_transaction_id": "673f3837-2509-1ac8-3221-800010000000",
+                  "parent_transaction_id": "673f3837-6939-1b4f-3182-800010000002",
+                  "amount": 81.15,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9924.92,
+              "transaction_id": "767f72fe-a7b6-4742-a92d-9d73c21144cb"
+          }
+      },
+      {
+          "request": {
+              "id": "c6brn9ze4rlsjh4k2i6ibsv1",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 0,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3837-24f4-1a27-3f41-800020000000",
+                  "betslip": {
+                      "uuid": "673f3837-24f4-1a27-3f41-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 8.3,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3838-5e45-18c5-35d9-800010000006",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "bf4c3d81-09a1-4d95-beb6-67a72e706d57",
+              "balance": 9924.92
+          }
+      },
+      {
+          "request": {
+              "id": "v83dwbwc0ega16khp3e3suti",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3837-24f4-1a27-3f41-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 9924.92,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "prxp5wkbo88vz37x9zmp1q77",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9924.92
+          }
+      },
+      {
+          "request": {
+              "id": "of7kvvcn6jwyzxrboqecy692",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 0.98,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3838-2117-1dff-3f83-800020000000",
+                  "betslip": {
+                      "uuid": "673f3838-2117-1dff-3f83-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 0.98,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3838-212d-1d88-344b-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "2a406762-6a22-44ca-a14c-d13f0f9e53d9",
+              "balance": 9923.94
+          }
+      },
+      {
+          "request": {
+              "id": "qxr146izumdbsxrxwjh8hsmp",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 0,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3838-2117-1dff-3f83-800020000000",
+                  "betslip": {
+                      "uuid": "673f3838-2117-1dff-3f83-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 0.98,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3839-30a6-180a-390d-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "f4ce93f5-17c8-4458-819b-81b449011a2c",
+              "balance": 9923.94
+          }
+      },
+      {
+          "request": {
+              "id": "x0tlxa1feg51kboh1mckmy99",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3838-2117-1dff-3f83-800020000000",
+                  "transaction_id": "673f3839-d16c-1f13-3a2e-800010000004",
+                  "bet_transaction_id": "673f3838-212d-1d88-344b-800010000000",
+                  "parent_transaction_id": "673f3839-30a6-180a-390d-800010000002",
+                  "amount": 0,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9923.94,
+              "transaction_id": "7fbbdc00-9414-406f-a2ef-2dc07c7154ba"
+          }
+      },
+      {
+          "request": {
+              "id": "yarakmq4ht56bwjwnq9e9vug",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 59.81,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3838-2117-1dff-3f83-800020000000",
+                  "betslip": {
+                      "uuid": "673f3838-2117-1dff-3f83-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 0.98,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3839-624d-1cb8-34ea-800010000006",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "ae631b81-463a-4835-a278-8997218899fe",
+              "balance": 9983.75
+          }
+      },
+      {
+          "request": {
+              "id": "kba1zr01bars4mr6ui3mpm2m",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3838-2117-1dff-3f83-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 9983.75,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "camyybkcj493dh8px8cd4vxm",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9983.75
+          }
+      },
+      {
+          "request": {
+              "id": "jdfc7fe2gtnv9f65ro1dq6k7",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 38.96,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383a-fac7-1b05-3154-800020000000",
+                  "betslip": {
+                      "uuid": "673f383a-fac7-1b05-3154-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 38.96,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f383a-fae1-1b2e-3f03-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "78218a2f-85e4-462c-9de9-141527a84c1b",
+              "balance": 9944.79
+          }
+      },
+      {
+          "request": {
+              "id": "sprn4j0zwru61nrwfvz2sgnd",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 48,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383a-fac7-1b05-3154-800020000000",
+                  "betslip": {
+                      "uuid": "673f383a-fac7-1b05-3154-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 38.96,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f383a-c836-1cfb-3bec-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "2a05cffb-1eea-417b-b71e-e0677fae5dd6",
+              "balance": 9992.79
+          }
+      },
+      {
+          "request": {
+              "id": "ks4euluyhwzicu59ajazi619",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383a-fac7-1b05-3154-800020000000",
+                  "transaction_id": "673f383b-998f-1c58-3893-800010000004",
+                  "bet_transaction_id": "673f383a-fae1-1b2e-3f03-800010000000",
+                  "parent_transaction_id": "673f383a-c836-1cfb-3bec-800010000002",
+                  "amount": 48,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9944.79,
+              "transaction_id": "def44252-ca5d-43e7-ac11-4883c573348d"
+          }
+      },
+      {
+          "request": {
+              "id": "geztwdkjiusrwidhjjlrdy3b",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 38.96,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383a-fac7-1b05-3154-800020000000",
+                  "transaction_id": "673f383b-fd64-1b93-3fa0-800010000006",
+                  "ref_transaction_id": "673f383a-fae1-1b2e-3f03-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "9cb7c820-ecfd-4a37-a8c3-5735504537ff",
+              "balance": 9983.75
+          }
+      },
+      {
+          "request": {
+              "id": "sa2w9l19c1ml2zva5fikm81x",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f383a-fac7-1b05-3154-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 9983.75,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "djh76i2edpbdtvhbmavywwf6",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9983.75
+          }
+      },
+      {
+          "request": {
+              "id": "psrblqhsyhysmglonro9usig",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 50.57,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383c-fd08-1fc6-334d-800020000000",
+                  "betslip": {
+                      "uuid": "673f383c-fd08-1fc6-334d-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 50.57,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f383c-fd20-1fae-3916-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "d3735893-9e0d-486c-b23a-a2397ac35566",
+              "balance": 9933.18
+          }
+      },
+      {
+          "request": {
+              "id": "unu9yybbycmpgsfgyoqan0oo",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 97.51,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383c-fd08-1fc6-334d-800020000000",
+                  "betslip": {
+                      "uuid": "673f383c-fd08-1fc6-334d-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 50.57,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f383c-85cb-1faa-3469-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "b17ab25e-97ef-48d6-90bb-c21873a7b6d7",
+              "balance": 10030.69
+          }
+      },
+      {
+          "request": {
+              "id": "xsjozb25kddeki4dggkurgud",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383c-fd08-1fc6-334d-800020000000",
+                  "transaction_id": "673f383c-5a4c-1bf5-3579-800010000004",
+                  "bet_transaction_id": "673f383c-fd20-1fae-3916-800010000000",
+                  "parent_transaction_id": "673f383c-85cb-1faa-3469-800010000002",
+                  "amount": 97.51,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9933.18,
+              "transaction_id": "5d89a85b-71d6-450d-8c94-a757bb5087c3"
+          }
+      },
+      {
+          "request": {
+              "id": "ig1x2hs8dqbkt118dutbldmh",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 185.84,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383c-fd08-1fc6-334d-800020000000",
+                  "betslip": {
+                      "uuid": "673f383c-fd08-1fc6-334d-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 50.57,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f383d-7b2d-17db-386f-800010000006",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "89ea213e-deba-4aa3-9c90-718ef03b751c",
+              "balance": 10119.02
+          }
+      },
+      {
+          "request": {
+              "id": "ymj8x0p5vflxxzqqd4ltvsy7",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f383c-fd08-1fc6-334d-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10119.02,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "tqkb47vukinfhy357whdxhqk",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10119.02
+          }
+      },
+      {
+          "request": {
+              "id": "ng5wyf1gf8mj8gcv45zj62cw",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 60.88,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "betslip": {
+                      "uuid": "673f383d-f822-18d9-3708-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 60.88,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f383d-f853-18ff-3720-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "4cfd62d4-e6db-4eed-9bed-de361bb2f956",
+              "balance": 10058.14
+          }
+      },
+      {
+          "request": {
+              "id": "p22ylib6rrmiwwcqa8bcywde",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 132.49,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "betslip": {
+                      "uuid": "673f383d-f822-18d9-3708-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 60.88,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f383e-0bf4-103c-357e-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "a1f78d38-ff2e-44b2-86bf-1135db972531",
+              "balance": 10190.63
+          }
+      },
+      {
+          "request": {
+              "id": "ok96oh2fb3g7fv59pb1pcijx",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "transaction_id": "673f383e-e336-1fd8-37f1-800010000004",
+                  "bet_transaction_id": "673f383d-f853-18ff-3720-800010000000",
+                  "parent_transaction_id": "673f383e-0bf4-103c-357e-800010000002",
+                  "amount": 132.49,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10058.14,
+              "transaction_id": "1e60d95e-a8b8-45af-9e86-7ea8fe07549f"
+          }
+      },
+      {
+          "request": {
+              "id": "htmb5mia5q0trx6a7c119e93",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 185.2,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "betslip": {
+                      "uuid": "673f383d-f822-18d9-3708-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 60.88,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f383e-4fbd-1831-358d-800010000006",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "8f64f034-8fab-40cb-9f74-41c3dd716770",
+              "balance": 10243.34
+          }
+      },
+      {
+          "request": {
+              "id": "p2eyqyntsnn979q1q8y0eh6e",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "transaction_id": "673f383e-3d22-1c90-363c-800010000008",
+                  "bet_transaction_id": "673f383d-f853-18ff-3720-800010000000",
+                  "parent_transaction_id": "673f383e-4fbd-1831-358d-800010000006",
+                  "amount": 185.2,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10058.14,
+              "transaction_id": "1e60d95e-a8b8-45af-9e86-7ea8fe07549f"
+          }
+      },
+      {
+          "request": {
+              "id": "u4ooz6yoly7h1zciyefo1pry",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 60.88,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "transaction_id": "673f383f-4a15-1aa7-3180-80001000000a",
+                  "ref_transaction_id": "673f383d-f853-18ff-3720-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "2295b132-2e1a-4bbb-9ef0-1dbbf0770060",
+              "balance": 10119.02
+          }
+      },
+      {
+          "request": {
+              "id": "z2wgumwh2nufzt9e4kkt7s7z",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f383d-f822-18d9-3708-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10119.02,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "x49408z67xrmr2av14058kus",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10119.02
+          }
+      },
+      {
+          "request": {
+              "id": "qqh5qi8g9lryuxd9q4m16tpo",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 79.68,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "betslip": {
+                      "uuid": "673f383f-186d-1b1e-355e-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 79.68,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f383f-188c-1bc0-34fe-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "f6e93b7a-520e-4753-b91a-0e4e777dcdcf",
+              "balance": 10039.34
+          }
+      },
+      {
+          "request": {
+              "id": "p2ld1pu7mdbi3n283ulj95zf",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 155.4,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "betslip": {
+                      "uuid": "673f383f-186d-1b1e-355e-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 79.68,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3840-3b1b-187d-314a-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "198f9c42-0ef6-4a58-a272-5c367bd5b7b1",
+              "balance": 10194.74
+          }
+      },
+      {
+          "request": {
+              "id": "d9eqw76xppg5wjjyj69mj5cz",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "transaction_id": "673f3840-1a00-1cb8-3697-800010000004",
+                  "bet_transaction_id": "673f383f-188c-1bc0-34fe-800010000000",
+                  "parent_transaction_id": "673f3840-3b1b-187d-314a-800010000002",
+                  "amount": 155.4,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10039.34,
+              "transaction_id": "5f78a115-b19f-4634-b7ea-82286c7884bd"
+          }
+      },
+      {
+          "request": {
+              "id": "n033pqtelh9x9pnrj4yp2vns",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 251.29,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "betslip": {
+                      "uuid": "673f383f-186d-1b1e-355e-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 79.68,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3840-65b3-1ade-3641-800010000006",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "32f1a62c-861b-4991-9b71-fb3a54785ae8",
+              "balance": 10290.63
+          }
+      },
+      {
+          "request": {
+              "id": "gh7uvp7lou2d0rjrdj7f6rbx",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "transaction_id": "673f3840-a210-1efa-3d4b-800010000008",
+                  "bet_transaction_id": "673f383f-188c-1bc0-34fe-800010000000",
+                  "parent_transaction_id": "673f3840-65b3-1ade-3641-800010000006",
+                  "amount": 251.29,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10039.34,
+              "transaction_id": "5f78a115-b19f-4634-b7ea-82286c7884bd"
+          }
+      },
+      {
+          "request": {
+              "id": "hkwb4kwjz2maech8te1ggcre",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 0,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "betslip": {
+                      "uuid": "673f383f-186d-1b1e-355e-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 79.68,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3841-ac61-1e4a-360f-80001000000a",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "92d3bd02-6ff3-4c6b-b051-86b1d9a1b20c",
+              "balance": 10039.34
+          }
+      },
+      {
+          "request": {
+              "id": "zhnm6g0wed1i0mtoytxu24v7",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f383f-186d-1b1e-355e-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10039.34,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "gwxwxcv9lm0lmb51la0s81p4",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10039.34
+          }
+      },
+      {
+          "request": {
+              "id": "ppbtme19y3ocbztp1iv7j0wl",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 26.77,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3841-d398-1bbe-314b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 26.77,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3841-d3b6-1bef-32a4-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "8abe5219-0d22-442a-9cf9-778da185c6fa",
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "bts5zl7ovk21ds37rb9hbjkm",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 122.84,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3841-d398-1bbe-314b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 26.77,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3842-dec4-1b04-35e4-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "f68b6bfe-317e-4da1-9b9a-2e7911e52ef5",
+              "balance": 10135.41
+          }
+      },
+      {
+          "request": {
+              "id": "qg5z7ztwc9pppsz3rcr8h0ft",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "transaction_id": "673f3842-affb-1d86-34ce-800010000004",
+                  "bet_transaction_id": "673f3841-d3b6-1bef-32a4-800010000000",
+                  "parent_transaction_id": "673f3842-dec4-1b04-35e4-800010000002",
+                  "amount": 122.84,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57,
+              "transaction_id": "2c8af2d8-0a0c-4325-a269-c92e18ebdea5"
+          }
+      },
+      {
+          "request": {
+              "id": "c8mvwr9rm5y7is9jdnq3t4wt",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 26.77,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "transaction_id": "673f3842-7204-1b2c-3b08-800010000006",
+                  "ref_transaction_id": "673f3841-d3b6-1bef-32a4-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "96ea65fb-cc9f-455c-8eeb-7c213eb635ca",
+              "balance": 10039.34
+          }
+      },
+      {
+          "request": {
+              "id": "v3h3pk3d5u4pt6dhp0og94xl",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "transaction_id": "673f3843-60d2-1b80-3d5b-800010000008",
+                  "bet_transaction_id": "673f3841-d3b6-1bef-32a4-800010000000",
+                  "parent_transaction_id": "673f3842-7204-1b2c-3b08-800010000006",
+                  "amount": 26.77,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57,
+              "transaction_id": "2c8af2d8-0a0c-4325-a269-c92e18ebdea5"
+          }
+      },
+      {
+          "request": {
+              "id": "v9qx2l4ahtqbwnbat91jxkfy",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 0,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3841-d398-1bbe-314b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 26.77,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3843-f319-1bd5-34e2-80001000000a",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "560641a9-80ce-465e-a1d0-5c39221375a8",
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "n8u8p44nq9fuy13g4dtq8rnq",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3841-d398-1bbe-314b-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10012.57,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "d6twm6xltqgm13yjdqc4nczd",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "q6aut28v5347jybr44i5dd29",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 27.23,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3843-11e2-1edf-3188-800020000000",
+                  "betslip": {
+                      "uuid": "673f3843-11e2-1edf-3188-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 27.23,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3843-1202-1e18-3646-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "8b21af9f-c78b-489c-9d5e-1a6ad01d8fa3",
+              "balance": 9985.34
+          }
+      },
+      {
+          "request": {
+              "id": "q3f98iafb7vs8fim3g44d4so",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 89.18,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3843-11e2-1edf-3188-800020000000",
+                  "transaction_id": "673f3844-ebe7-19de-3ce5-800010000002",
+                  "ref_transaction_id": "673f3843-1202-1e18-3646-800010000000",
+                  "type": "cash_out",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "5a3c478d-e089-400d-8ff2-9da1fcb1fa00",
+              "balance": 10074.52
+          }
+      },
+      {
+          "request": {
+              "id": "fsfttyevp83ft7j7ow2gtb6b",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3843-11e2-1edf-3188-800020000000",
+                  "transaction_id": "673f3844-12a4-1acb-3d2b-800010000004",
+                  "bet_transaction_id": "673f3843-1202-1e18-3646-800010000000",
+                  "parent_transaction_id": "673f3844-ebe7-19de-3ce5-800010000002",
+                  "amount": 89.18,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9985.34,
+              "transaction_id": "85cb138a-d226-49dd-b54a-c78a8dc9dd00"
+          }
+      },
+      {
+          "request": {
+              "id": "an5djiygmrue45aqrxb9in8j",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 27.23,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3843-11e2-1edf-3188-800020000000",
+                  "transaction_id": "673f3844-e21f-1ec0-3e37-800010000006",
+                  "ref_transaction_id": "673f3843-1202-1e18-3646-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "dc2d297b-8393-4b6d-90eb-0d7cd0b0f4e8",
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "hodpxab2rovr3al4tqoc7npd",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "bro7jrlogkjrjeuwiz8nwmqv",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 127.83,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3845-e1e4-1d8c-30b1-800020000000",
+                  "betslip": {
+                      "uuid": "673f3845-e1e4-1d8c-30b1-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 97.94,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3845-e214-1d98-3526-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "error_code": "INTERNAL_ERROR",
+              "error_description": "Internal error Bet not found"
+          }
+      },
+      {
+          "request": {
+              "id": "sjdywph7m6blhkbpsolkvj87",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "uenu7641aksxf2kjog2hwror",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 54.46,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3845-11be-1ada-3869-800020000000",
+                  "transaction_id": "673f3845-11e2-1a88-301b-800010000002",
+                  "ref_transaction_id": "673f3845-11d1-1ac1-3e0f-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "error_code": "INTERNAL_ERROR",
+              "error_description": "Internal error Bet not found"
+          }
+      },
+      {
+          "request": {
+              "id": "x396k038t39krsxok05hxznh",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "pf7fewqbh7xcejo877toy0gd",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 67.04,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                  "betslip": {
+                      "uuid": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 67.04,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3845-4bd4-1dfb-3ba6-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "22fa52a1-1397-49db-89f7-da21449f1c15",
+              "balance": 9945.53
+          }
+      },
+      {
+          "request": {
+              "id": "x5erlc8z0b4o6x7ithyvmhan",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 67.04,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                  "transaction_id": "673f3846-abbf-1963-3cdc-800010000002",
+                  "ref_transaction_id": "673f3845-4bd4-1dfb-3ba6-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "32c63aee-46f9-49be-8bff-f26df8535a98",
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "fke4v1rwaogh0n996ws6te6b",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10012.57,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "tvsirjq9gw8ttmj285mxjz2j",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 107.26,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                  "betslip": {
+                      "uuid": "673f3845-4bc1-1dcf-3f0c-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "settled",
+                      "amount": 67.04,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3846-d05b-1c0b-3dd9-800010000005",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "error_code": "INTERNAL_ERROR",
+              "error_description": "Internal error Bet already settled"
+          }
+      },
+      {
+          "request": {
+              "id": "yri2sv6b532guoc34mud7mtq",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10012.57
+          }
+      },
+      {
+          "request": {
+              "id": "qz7kp8ucxnjb6jbcf458dbnp",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 80.45,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3847-4339-1add-37a9-800020000000",
+                  "betslip": {
+                      "uuid": "673f3847-4339-1add-37a9-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 80.45,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3847-434f-1a8b-38ab-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "d8b8baa8-dd4a-4e9a-b81e-965513c45ac9",
+              "balance": 9932.12
+          }
+      },
+      {
+          "request": {
+              "id": "ftdx9ntln5d1fqpr4p08bwon",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 96.07,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3847-4339-1add-37a9-800020000000",
+                  "betslip": {
+                      "uuid": "673f3847-4339-1add-37a9-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 80.45,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3847-ade4-1f3a-3741-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "4e4955fc-8ca3-40b8-8713-518dd500ac0b",
+              "balance": 10028.19
+          }
+      },
+      {
+          "request": {
+              "id": "zvvf7wq8ml0ktvrz3zimhnbd",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3847-4339-1add-37a9-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10028.19,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "wahzigsf3h9v3gjvbx0qx8j4",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 80.45,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3847-4339-1add-37a9-800020000000",
+                  "transaction_id": "673f3847-4dfb-1e47-3b0b-800010000005",
+                  "ref_transaction_id": "673f3847-434f-1a8b-38ab-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "error_code": "INTERNAL_ERROR",
+              "error_description": "Internal error Bet already settled"
+          }
+      },
+      {
+          "request": {
+              "id": "opgctkkq4sqt1fv4r0742gie",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10028.19
+          }
+      },
+      {
+          "request": {
+              "id": "g5xrxpl4uxd52mtt9agvvwrt",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 60.06,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3848-62cc-19a5-32ee-800020000000",
+                  "betslip": {
+                      "uuid": "673f3848-62cc-19a5-32ee-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 60.06,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3848-62e5-1999-3e19-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "581383e3-c539-424e-9571-7654440381d8",
+              "balance": 9968.13
+          }
+      },
+      {
+          "request": {
+              "id": "ey9dx4apd6aqqfpppvff54m0",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 70.57,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3848-62cc-19a5-32ee-800020000000",
+                  "betslip": {
+                      "uuid": "673f3848-62cc-19a5-32ee-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 60.06,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3848-0819-19bb-3c10-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "673aa8fe-bd8b-4228-8b26-be9b95a020a0",
+              "balance": 10038.7
+          }
+      },
+      {
+          "request": {
+              "id": "a09tteuz07kq43jl7ihobry4",
+              "url": "/api/slotegrator/sportsbook/event/settle",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "betslip_id": "673f3848-62cc-19a5-32ee-800020000000",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "action": "settle"
+              }
+          },
+          "response": {
+              "balance": 10038.7,
+              "status": "settled"
+          }
+      },
+      {
+          "request": {
+              "id": "d9gyqn8hnyhabk6mdzmaxkj1",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f3848-62cc-19a5-32ee-800020000000",
+                  "transaction_id": "673f3849-6086-1617-3a5a-800010000005",
+                  "bet_transaction_id": "673f3848-62e5-1999-3e19-800010000000",
+                  "parent_transaction_id": "673f3848-0819-19bb-3c10-800010000002",
+                  "amount": 70.57,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "error_code": "INTERNAL_ERROR",
+              "error_description": "Internal error Bet already settled"
+          }
+      },
+      {
+          "request": {
+              "id": "zf2oiyu7c8g937jcvmtf7nxl",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10038.7
+          }
+      },
+      {
+          "request": {
+              "id": "qsld6mwah3ow8g22cp7w0crs",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 39.16,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3849-02cc-184c-365b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3849-02cc-184c-365b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 39.16,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f3849-02e3-184e-3420-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "4cf1ebec-892e-46f0-9b5c-d210c7105831",
+              "balance": 9999.54
+          }
+      },
+      {
+          "request": {
+              "id": "tja9muojawua4lvgzi5lxsio",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 66.09,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3849-02cc-184c-365b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3849-02cc-184c-365b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 39.16,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3849-4e04-1aa7-3faf-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "afffdac6-4d17-4b65-8aa5-151379f93ce1",
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "b5db8n2o1rqxxes4cmp9y1yv",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 66.09,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f3849-02cc-184c-365b-800020000000",
+                  "betslip": {
+                      "uuid": "673f3849-02cc-184c-365b-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 39.16,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f3849-4e04-1aa7-3faf-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "afffdac6-4d17-4b65-8aa5-151379f93ce1",
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "hq7s6ps01fjv74n70xy26sgp",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "c9f1o4ya7ayem36bwfubg3n9",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 57.44,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f384a-a0af-1eb7-375f-800020000000",
+                  "betslip": {
+                      "uuid": "673f384a-a0af-1eb7-375f-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 57.44,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f384a-a0c2-1e51-3e21-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "af5a7e1e-3914-48a8-bccb-60827414c04d",
+              "balance": 10008.19
+          }
+      },
+      {
+          "request": {
+              "id": "flnvyebuetsg2ba5s3ghtz8b",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 57.44,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f384a-a0af-1eb7-375f-800020000000",
+                  "transaction_id": "673f384a-022a-1a5e-35af-800010000002",
+                  "ref_transaction_id": "673f384a-a0c2-1e51-3e21-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "d48c463d-863a-4205-8a82-b2d0be9b6412",
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "nqshbf8jw2570h5kzg4mfney",
+              "url": "/api/slotegrator/sportsbook/event/refund",
+              "method": "POST",
+              "body": {
+                  "amount": 57.44,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f384a-a0af-1eb7-375f-800020000000",
+                  "transaction_id": "673f384a-022a-1a5e-35af-800010000002",
+                  "ref_transaction_id": "673f384a-a0c2-1e51-3e21-800010000000",
+                  "type": "default",
+                  "action": "refund"
+              }
+          },
+          "response": {
+              "transaction_id": "d48c463d-863a-4205-8a82-b2d0be9b6412",
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "cnzlkwmjaadqoe75k6sazcvc",
+              "url": "/api/slotegrator/sportsbook/event/balance",
+              "method": "POST",
+              "body": {
+                  "action": "balance",
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 10065.63
+          }
+      },
+      {
+          "request": {
+              "id": "ipgrs1yr3hiqunwrik54fliy",
+              "url": "/api/slotegrator/sportsbook/event/bet",
+              "method": "POST",
+              "body": {
+                  "amount": 89.18,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f384b-84d5-19fb-36e7-800020000000",
+                  "betslip": {
+                      "uuid": "673f384b-84d5-19fb-36e7-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 89.18,
+                      "currency": "USD",
+                      "items": [],
+                      "parameters": {
+                          "is_quick_bet": true
+                      }
+                  },
+                  "transaction_id": "673f384b-84ea-196e-33a3-800010000000",
+                  "action": "bet"
+              }
+          },
+          "response": {
+              "transaction_id": "fc3904e5-f840-4969-860f-b2a2cfd664f0",
+              "balance": 9976.45
+          }
+      },
+      {
+          "request": {
+              "id": "tfc6zkhnr746652mqiov7lgq",
+              "url": "/api/slotegrator/sportsbook/event/win",
+              "method": "POST",
+              "body": {
+                  "amount": 165.79,
+                  "currency": "USD",
+                  "sportsbook_uuid": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f",
+                  "betslip_id": "673f384b-84d5-19fb-36e7-800020000000",
+                  "betslip": {
+                      "uuid": "673f384b-84d5-19fb-36e7-800020000000",
+                      "provider_betslip_id": "d595248f-75ff-454b-8d6d-e6a232dff199",
+                      "status": "open",
+                      "amount": 89.18,
+                      "currency": "USD",
+                      "items": []
+                  },
+                  "transaction_id": "673f384b-e685-1abf-3948-800010000002",
+                  "action": "win"
+              }
+          },
+          "response": {
+              "transaction_id": "3602a9cd-952d-4029-b0ac-bc9e45fbf0f4",
+              "balance": 10142.24
+          }
+      },
+      {
+          "request": {
+              "id": "y76fwvqgweigvlv6c83zizro",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f384b-84d5-19fb-36e7-800020000000",
+                  "transaction_id": "673f384b-a8ce-1e79-3e4a-800010000004",
+                  "bet_transaction_id": "673f384b-84ea-196e-33a3-800010000000",
+                  "parent_transaction_id": "673f384b-e685-1abf-3948-800010000002",
+                  "amount": 165.79,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9976.45,
+              "transaction_id": "52019118-aff3-4995-a484-8ceaf22ea4e3"
+          }
+      },
+      {
+          "request": {
+              "id": "qnui43rivxgmgupsg8i544kq",
+              "url": "/api/slotegrator/sportsbook/event/rollback",
+              "method": "POST",
+              "body": {
+                  "currency": "USD",
+                  "player_id": "cm2nd6tt10001uh5b7xod2zpq",
+                  "betslip_id": "673f384b-84d5-19fb-36e7-800020000000",
+                  "transaction_id": "673f384b-a8ce-1e79-3e4a-800010000004",
+                  "bet_transaction_id": "673f384b-84ea-196e-33a3-800010000000",
+                  "parent_transaction_id": "673f384b-e685-1abf-3948-800010000002",
+                  "amount": 165.79,
+                  "action": "rollback",
+                  "session_id": "09356b07-f261-4aa6-a6fe-7a199a4b6c7f"
+              }
+          },
+          "response": {
+              "balance": 9976.45,
+              "transaction_id": "52019118-aff3-4995-a484-8ceaf22ea4e3"
+          }
+      }
+  ]
+}

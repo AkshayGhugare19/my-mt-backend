@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "您的余额已被调整",
+      "message": "您的余额已被 {masterName} 调整了 {amount}。"
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "您的奖金已到账",
+      "message": "您收到了来自 {bonusName} 的 {amount} 美元。"
+    },
+    "rollover_started": {
+      "title": "您获得了奖金！完成滚动以解锁 {amount} 美元",
+      "message": "恭喜您获得了 {bonusName}！请完成 {rollover} 的滚动条件以解锁您的 {amount} 美元奖励。现在就开始吧！"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "入金成功",
+      "message": "您的 {amount} 入金成功。"
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "充值请求已创建",
+      "message": "已创建一项新的充值请求，金额为 {amount} 代币。"
+    },
+    "approved": {
+      "title": "充值请求已批准",
+      "message": "您的充值请求已被批准，金额为 {amount} 代币。"
+    },
+    "rejected": {
+      "title": "充值请求已拒绝",
+      "message": "您的充值请求已被拒绝，金额为 {amount} 代币。"
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "结算请求已创建",
+      "message": "您有一项新的结算请求，金额为 {amount} 代币。"
+    },
+    "created_by_supermaster": {
+      "title": "结算请求已创建",
+      "message": "超级管理员 {superMasterName} 已发起一项新的结算请求，金额为 {amount} 代币。"
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "提现请求已创建",
+      "message": "已创建一项金额为 {amount} 的提现请求。"
+    },
+    "approved": {
+      "title": "提现请求已批准",
+      "message": "金额为 {amount} 的提现请求已被批准。"
+    },
+    "completed": {
+      "title": "提现请求已完成",
+      "message": "您的提现请求，金额为 {amount}，已完成。"
+    },
+    "rejected": {
+      "title": "提现请求已拒绝",
+      "message": "您的提现请求，金额为 {amount}，已被拒绝。"
+    },
+    "failed": {
+      "title": "提现请求失败",
+      "message": "金额为 {amount} 的提现请求未能发送。"
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "波场 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "波场 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "波场 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 波场币。当前 波场币 余额：{balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "索拉纳 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "索拉纳 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "索拉纳 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 索拉纳币。当前 索拉纳币 余额：{balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "以太坊 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "以太坊 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 泰达币。当前 泰达币 余额：{balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "以太坊 提现钱包余额警告",
+      "message": "提现钱包的余额低于 {limit} 以太坊。当前 以太坊 余额：{balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "您的扑克代码已到达",
+      "message": "您已收到以下扑克代码：{pokerCodes}。"
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "您收到了小费",
+      "message": "您收到了来自 {sender} 的 {amount} 美元小费。"
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "您收到了奖励",
+      "message": "您收到了 {amount} 美元奖励 - {description}。"
+    }
+  }
+}

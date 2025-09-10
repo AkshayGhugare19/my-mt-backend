@@ -1,0 +1,920 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider      = "prisma-client-js"
+  binaryTargets = ["native", "linux-musl-openssl-3.0.x"]
+}
+
+generator kysely {
+  provider = "prisma-kysely"
+
+  output              = "../kysely"
+  fileName            = "generated.ts"
+  enumFileName        = "enums.ts"
+  decimalTypeOverride = "import('@prisma/client/runtime/library').Decimal"
+  bigIntTypeOverride  = "import('@prisma/client/runtime/library').Decimal"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_DIRECT_URL")
+}
+
+model User {
+  id                    String    @id @default(cuid())
+  masterId              String?   @map("master_id")
+  email                 String?   @unique
+  nickname              String?   @unique
+  password              String?
+  wallet                String?   @unique
+  avatar                String?   @map("avatar")
+  blockchain            Int?      @db.SmallInt()
+  playerTag             String    @unique @map("player_tag")
+  maxExposurePerVip     Decimal?  @map("max_exposure_per_vip") // master only
+  maxBetSize            Decimal?  @map("max_bet_size")
+  maxNumberOfUsers      Int?      @map("max_number_of_users") // master only
+  // !CHECK - https://trello.com/c/a7oN4CuC
+  isBonusEnabled        Boolean?  @map("is_bonus_enabled") // vip only
+  predefinedBookieStake Decimal? // Master only
+  flexibleBookieStake   Decimal? // Master only
+  userBookieStake       Decimal? // vip only
+  resetPasswordRequired Boolean   @default(false) @map("reset_password_required")
+  canWithdraw           Boolean   @default(true) @map("can_withdraw")
+  createdAt             DateTime  @default(now()) @map("created_at")
+  updatedAt             DateTime  @updatedAt @map("updated_at")
+  blockedAt             DateTime? @map("blocked_at")
+  deletedAt             DateTime? @map("deleted_at")
+  active                Boolean   @default(true)
+  enable2FA             Boolean   @default(false) @map("enable_2fa")
+  partnerMatrixId       Int?      @default(autoincrement()) @map("pm_id")
+  partnerMatrixBtag     String?   @map("partner_matrix_btag")
+  level                 Int       @default(1)
+  rank                  String    @default("Rank Bronze") // Check type: GamanzaRank
+  signUpEventSent       Boolean   @default(true) @map("sign_up_event_sent")
+  mediaType             String    @default("USER") @map("media_type") @ignore
+  countryCode           String?   @map("country_code")
+
+  master                             User?                    @relation("MasterToUser", fields: [masterId], references: [id])
+  users                              User[]                   @relation("MasterToUser")
+  balance                            Balance?
+  TransactionLedger                  Transaction[]
+  Bet                                Bet[]
+  tokenIssueRequests                 TokenIssueRequest[]      @relation("TokenIssueRequester")
+  masterTokenIssueRequests           TokenIssueRequest[]      @relation("TokenIssueMaster")
+  UserCode                           UserCode[]
+  masterSettlementRequests           TokenSettlementRequest[] @relation("MasterSettlementRequests")
+  userRoles                          UserRole[]
+  userSettlementRequests             TokenSettlementRequest[] @relation("UserSettlementRequests")
+  WithdrawalRequest                  WithdrawalRequest[]
+  ApprovedWithdrawalRequest          WithdrawalRequest[]      @relation("FirstApproverUser")
+  SecondaryApprovedWithdrawalRequest WithdrawalRequest[]      @relation("SecondApproverUser")
+
+  notifications        Notification[]
+  bonus                Bonus[]
+  UserBonusProgression UserBonusProgression[]
+  UserBonusBalance     UserBonusBalance[]
+  Web3AuthAccount      Web3AuthAccount[]
+  pokerRakes           PokerRake[]
+
+  pokerCodeDistributions PokerCodeDistribution[] @relation("UserPokerCodeDistributions")
+  createdPokerCodes      PokerCode[]             @relation("PokerCodeCreatedBy")
+  CouponCodes            CouponCode[]
+  CouponCodeRedeems      CouponCodeRedeem[]
+  rewards                Reward[]                @relation("RewardReceiver")
+  rewardsSender          Reward[]                @relation("RewardSender")
+  userPreference         UserPreference?
+  depositWallet          DepositWallet[]
+  media                  Media[]
+  PushSubscription       PushSubscription[]
+  provider               String?
+  socialProviderId       String?
+
+  @@unique([id])
+  @@unique([id, mediaType])
+  @@index([masterId])
+  @@index([createdAt])
+  @@map("users")
+}
+
+model Web3AuthAccount {
+  id         String   @id @default(cuid())
+  userId     String   @map("user_id")
+  type       String
+  curve      String?  @db.VarChar(10)
+  email      String?  @db.VarChar(80)
+  provider   String?  @db.VarChar(80)
+  blockchain String?  @db.VarChar(10)
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("web3auth_accounts")
+}
+
+model Notification {
+  id          String   @id @default(cuid())
+  userId      String   @map("user_id")
+  titleArgs   Json?    @map("title_args")
+  messageArgs Json?    @map("message_args")
+  code        String
+  read        Boolean  @default(false)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("notifications")
+}
+
+model Secret {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("secrets")
+}
+
+model Parameter {
+  id        Int      @id @default(autoincrement())
+  key       String   @unique
+  value     String
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("parameters")
+}
+
+model Role {
+  id             Int              @id @default(autoincrement())
+  name           String           @unique
+  userRoles      UserRole[]
+  rolePermission RolePermission[]
+
+  @@map("roles")
+}
+
+model UserRole {
+  userId String @map("user_id")
+  roleId Int    @map("role_id")
+
+  user User @relation(fields: [userId], references: [id])
+  role Role @relation(fields: [roleId], references: [id])
+
+  @@id([userId, roleId])
+  @@index([roleId])
+  @@index([userId])
+  @@map("user_roles")
+}
+
+model Permission {
+  id              Int              @id @default(autoincrement())
+  name            String           @unique
+  isEditable      Boolean          @default(true) @map("is_editable")
+  rolePermissions RolePermission[]
+
+  @@map("permissions")
+}
+
+model RolePermission {
+  roleId       Int @map("role_id")
+  permissionId Int @map("permission_id")
+
+  role       Role       @relation(fields: [roleId], references: [id])
+  permission Permission @relation(fields: [permissionId], references: [id])
+
+  @@id([roleId, permissionId])
+  @@index([permissionId])
+  @@index([roleId])
+  @@map("role_permissions")
+}
+
+model UserCode {
+  id     Int    @id @default(autoincrement())
+  userId String @map("user_id") @db.VarChar(30)
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  code     String
+  codeType String @map("code_type")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  expiresAt DateTime @map("expires_at")
+
+  @@unique([userId, codeType])
+  @@map("user_codes")
+}
+
+model Balance {
+  userId        String    @id @map("user_id")
+  balance       Decimal   @default(0)
+  debt          Decimal   @default(0)
+  totalDeposit  Decimal   @default(0) @map("total_deposit")
+  totalIssuedTo Decimal   @default(0) @map("total_issued_to")
+  totalSettled  Decimal   @default(0) @map("total_settled")
+  totalWithdraw Decimal   @default(0) @map("total_withdraw")
+  totalWin      Decimal   @default(0) @map("total_win")
+  totalLoss     Decimal   @default(0) @map("total_loss")
+  volumePlayed  Decimal   @default(0) @map("volume_played")
+  biggestWin    Decimal   @default(0) @map("biggest_win")
+  biggestLoss   Decimal   @default(0) @map("biggest_loss")
+  createdAt     DateTime  @default(now()) @map("created_at")
+  updatedAt     DateTime  @updatedAt @map("updated_at")
+  deletedAt     DateTime? @map("deleted_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@map("balances")
+}
+
+model Transaction {
+  id            String   @id @default(cuid())
+  userId        String   @map("user_id")
+  operationType String   @map("operation_type")
+  counterParty  String   @map("counter_party") // deposit, SportsExchange, SportsBook, masterTokenIssue, etc.
+  referenceId   String   @map("reference_id")
+  targetBalance String   @default("account_balance") @map("target_balance") // bonus_balance, account_balance, etc.
+  amount        Decimal
+  status        String   @default("PENDING")
+  createdAt     DateTime @default(now()) @map("created_at")
+  updatedAt     DateTime @updatedAt @map("updated_at")
+
+  user                 User                   @relation(fields: [userId], references: [id])
+  BetCreditTransaction BetCreditTransaction[]
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("transactions_ledger")
+}
+
+model Bet {
+  id                   String   @id @default(cuid())
+  userId               String   @map("user_id")
+  thirdPartyIdentifier String   @map("third_party_identifier")
+  provider             String   @map("provider") // sportsbook, casino, etc.
+  debitTransactionId   String   @map("debit_transaction_id")
+  creditTransactionId  String?  @unique @default(cuid()) @map("credit_transaction_id")
+  /// [BetMetadata]
+  metadata             Json     @map("metadata")
+  betAmount            Decimal  @map("bet_amount")
+  settlementAmount     Decimal? @map("settlement_amount") //profit + betAmount
+  status               String   @default("PENDING") @map("status") //PENDING, WIN, LOSE
+  createdAt            DateTime @default(now()) @map("created_at")
+  updatedAt            DateTime @updatedAt @map("updated_at")
+  exposure             Decimal?
+  previousBalance      Decimal? @map("previous_balance")
+
+  user                     User                       @relation(fields: [userId], references: [id])
+  FungamessBets            FungamessBet[]
+  BetCreditTransaction     BetCreditTransaction[]
+  SlotegratorGameBets      SlotegratorGameBet[]
+  SlotegratorSportsBookBet SlotegratorSportsBookBet[]
+
+  @@index([userId])
+  @@index([createdAt])
+  @@map("bets")
+}
+
+model BetCreditTransaction {
+  betCreditTransactionId String   @map("bet_credit_transaction_id")
+  transactionId          String   @map("transaction_id")
+  createdAt              DateTime @default(now()) @map("created_at")
+  updatedAt              DateTime @updatedAt @map("updated_at")
+
+  bet         Bet         @relation(fields: [betCreditTransactionId], references: [creditTransactionId])
+  transaction Transaction @relation(fields: [transactionId], references: [id])
+
+  @@unique([betCreditTransactionId, transactionId])
+  @@map("bet_credit_transactions")
+}
+
+model FungamessBet {
+  id            String @id @default(cuid())
+  betId         String @map("bet_id")
+  gameId        String @map("game_id")
+  transactionId String @map("transaction_id")
+  eventType     String @map("event_type")
+  direction     String @map("direction")
+  bet           Bet    @relation(fields: [betId], references: [id])
+
+  @@index([transactionId])
+  @@index([gameId])
+  @@map("fungamess_bets")
+}
+
+model FungamessProvider {
+  providerId Int    @id @map("provider_id")
+  name       String
+  logo       String
+  category   Int
+
+  games FungamessGame[]
+
+  @@map("fungamess_providers")
+}
+
+model FungamessGame {
+  gameId       Int     @id @map("game_id")
+  disabled     Boolean @default(false)
+  available    Boolean @default(true)
+  name         String
+  basicRTP     Decimal @map("basic_rtp")
+  providerId   Int     @map("provider_id")
+  type         String
+  bonusBuy     Boolean @map("bonus_buy")
+  img          String
+  imgVertical  String  @map("img_vertical")
+  imgProvider  String  @map("img_provider")
+  demo         Boolean @default(false)
+  category     String
+  typeId       Int     @map("type_id")
+  device       String
+  categoryIcon String? @map("category_icon")
+
+  provider FungamessProvider @relation(fields: [providerId], references: [providerId])
+
+  @@map("fungamess_games")
+}
+
+model SlotegratorGame {
+  uuid               String  @id @map("game_id")
+  disabled           Boolean @default(false)
+  available          Boolean @default(true)
+  name               String
+  title              String? @map("title") @db.VarChar(100)
+  image              String?
+  type               String
+  slug               String  @map("slug") @db.VarChar(150)
+  oldSlug            String? @map("old_slug") @db.VarChar(150)
+  provider           String
+  technology         String
+  hasLobby           Boolean @map("has_lobby")
+  isMobileFullWindow Boolean @map("is_mobile_full_window")
+  hasFreeSpins       Boolean @map("has_free_spins")
+  hasTables          Boolean @map("has_tables")
+  newRelease  Boolean @map("new_release") @default(false)
+  newReleaseDate     DateTime? @map("new_release_date")
+
+  bets SlotegratorGameBet[]
+
+  gameCategoryId String?       @map("game_category_id")
+  gameCategory   GameCategory? @relation(fields: [gameCategoryId], references: [id])
+
+  @@index([slug])
+  @@index([oldSlug])
+}
+
+model SlotegratorGameBet {
+  id                       String   @id @default(cuid())
+  betId                    String   @map("bet_id")
+  transactionId            String   @map("transaction_id")
+  settlementTransactionIds String[] @map("settlement_transaction_id")
+  refundTransactionIds     String[] @map("refund_transaction_id")
+  sessionId                String?  @map("sesison_id")
+  type                     String
+  roundId                  String   @default(cuid()) @map("round_id")
+  roundFinished            Boolean  @default(true) @map("round_finished")
+
+  rollbackTransactionIds String[] @map("rollback_transaction_id")
+
+  processedTransactionIds String[] @map("processed_transaction_id")
+
+  gameId String          @map("game_id")
+  game   SlotegratorGame @relation(fields: [gameId], references: [uuid])
+
+  bet Bet @relation(fields: [betId], references: [id])
+
+  @@index([transactionId])
+  @@index([gameId])
+  @@map("slotegrator_game_bets")
+}
+
+model SlotegratorSportsBookBet {
+  id                       String   @id @default(cuid())
+  betId                    String   @map("bet_id")
+  transactionId            String   @map("transaction_id")
+  settlementTransactionIds String[] @map("settlement_transaction_id")
+  refundTransactionIds     String[] @map("refund_transaction_id")
+  sessionId                String?  @map("sesison_id")
+  gameId                   String   @map("game_id")
+  settled                  Boolean  @default(false)
+
+  rollbackTransactionIds String[] @map("rollback_transaction_id")
+
+  processedTransactionIds String[] @map("processed_transaction_id")
+
+  bet Bet @relation(fields: [betId], references: [id])
+
+  @@index([transactionId])
+  @@map("slotegrator_sportsbook_bets")
+}
+
+model DepositTransaction {
+  id             String   @id @default(cuid())
+  transactionId  String   @map("transaction_id")
+  status         String
+  sender         String
+  receiver       String
+  amount         Decimal
+  blockTimestamp BigInt
+  blockNumber    BigInt
+  raw            Json     @db.Json()
+  currency       Int      @default(0) @db.SmallInt()
+  usdAmount      Decimal? @map("usd_amount")
+  blockchain     Int?     @db.SmallInt()
+
+  @@map("deposit_transactions")
+}
+
+model DepositWallet {
+  userId     String   @map("user_id")
+  wallet     String   @unique
+  blockchain Int      @db.SmallInt()
+  isActive   Boolean  @default(true) @map("is_active")
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @default(now()) @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id])
+
+  @@unique([userId, wallet])
+  @@unique([wallet, blockchain])
+  @@index([userId])
+  @@map("deposit_wallets")
+}
+
+model WithdrawalRequest {
+  id String @id @default(cuid())
+
+  userId       String @map("user_id")
+  user         User   @relation(fields: [userId], references: [id])
+  targetWallet String @map("target_wallet")
+
+  transactionHash String? @map("transaction_hash")
+
+  amount     Decimal
+  usdAmount  Decimal? @map("usd_amount")
+  currency   Int      @default(0) @db.SmallInt()
+  blockchain Int?     @db.SmallInt()
+  status     String   @default("PENDING") // PENDING, WAITING_FINAL_APPROVAL, APPROVED, REJECTED
+
+  firstApprovalAt  DateTime? @map("first_approval_at")
+  secondApprovalAt DateTime? @map("second_approval_at")
+
+  firstApproverId String? @map("first_approver_id")
+  firstApprover   User?   @relation("FirstApproverUser", fields: [firstApproverId], references: [id])
+
+  secondApproverId String? @map("second_approver_id")
+  secondApprover   User?   @relation("SecondApproverUser", fields: [secondApproverId], references: [id])
+
+  proof    String? @db.Text()
+  /// @kyselyType(import('@modules/withdrawal/types').WithdrawalRequestMetadata)
+  metadata Json?   @map("metadata")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([createdAt])
+  @@index([userId])
+  @@map("withdrawal_requests")
+}
+
+model TokenIssueRequest {
+  id String @id @default(cuid())
+
+  requesterId String @map("requester_id")
+  requester   User   @relation("TokenIssueRequester", fields: [requesterId], references: [id])
+  masterId    String @map("master_id")
+  master      User   @relation("TokenIssueMaster", fields: [masterId], references: [id])
+  initiator   String // user, master, super_master
+
+  amount         Decimal
+  status         String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  prepaidPercent Float?   @map("prepaid_percent")
+  paymentType    String?  @map("payment_type") // usdt, cash 
+  proof          String?  @db.Text()
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+
+  @@index([createdAt])
+  @@index([requesterId])
+  @@index([masterId])
+  @@map("token_issue_requests")
+}
+
+model TokenSettlementRequest {
+  id String @id @default(cuid())
+
+  targetId              String    @map("target_id")
+  user                  User      @relation("UserSettlementRequests", fields: [targetId], references: [id])
+  masterId              String    @map("master_id")
+  master                User      @relation("MasterSettlementRequests", fields: [masterId], references: [id])
+  settleAmount          Decimal?  @map("settle_amount")
+  amount                Decimal
+  status                String    @default("PENDING") // PENDING, APPROVED, REJECTED, PROOF_ADDED, CLOSED
+  type                  String // MASTER_SETTLEMENT, VIP_SETTLEMENT
+  proof                 String?   @db.Text()
+  masterApprovedAt      DateTime? @map("master_approved_at")
+  superMasterApprovedAt DateTime? @map("super_master_approved_at")
+  proofUploader         String?   @map("proof_uploader") //MASTER, SUPER_MASTER
+  initiator             String // VIP, MASTER, SUPER_MASTER
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([createdAt])
+  @@index([targetId])
+  @@index([masterId])
+  @@map("token_settlement_requests")
+}
+
+model Bonus {
+  id                    String    @id @default(cuid())
+  creatorId             String    @map("creator_id")
+  rewardType            String    @map("reward_type") // percentage, flat
+  type                  String    @map("type") // instant, progress
+  name                  String
+  description           String    @map("description") @db.Text()
+  limitPerUser          Int?      @map("limit_per_user")
+  maxReward             Decimal?  @map("max_reward")
+  rewardAmount          Decimal   @map("reward_amount") // percentage or flat amount
+  rolloverType          String?   @map("rollover_type") // relative, fixed
+  rolloverAmount        Decimal?  @map("rollover_amount")
+  bonusExpiryTime       Int?      @map("bonus_expiry_time") // in seconds
+  bonusExpiryHour       Int?      @map("bonus_expiry_hour") // in hours
+  rolloverExpiryTime    Int?      @map("rollover_expiry_time") // in seconds
+  withdrawAfterRollover Boolean   @default(false) @map("withdraw_after_rollover")
+  createdAt             DateTime  @default(now()) @map("created_at")
+  updatedAt             DateTime  @updatedAt @map("updated_at")
+  deletedAt             DateTime? @map("deleted_at")
+
+  user                       User                         @relation(fields: [creatorId], references: [id])
+  bonusTriggerProducerConfig BonusTriggerProducerConfig[]
+  userBonusProgression       UserBonusProgression[]
+  userBonusBalance           UserBonusBalance[]
+  bonusTriggerProgressConfig BonusTriggerProgressConfig[]
+  bonusTriggerConsumerConfig BonusTriggerConsumerConfig[]
+  CouponCode                 CouponCode[]
+
+  @@map("bonuses")
+}
+
+model BonusTrigger {
+  id                         Int                          @id @default(autoincrement())
+  name                       String // ADMIN etc.
+  configType                 String                       @map("config_type") // admin_generated, spinner, deposit, gamification, bet_placing, bet_settlement
+  type                       String // consumer, producer, progress
+  configOptions              Json                         @map("config_options") // config definition
+  createdAt                  DateTime                     @default(now()) @map("created_at")
+  updatedAt                  DateTime                     @updatedAt @map("updated_at")
+  deletedAt                  DateTime?                    @map("deleted_at")
+  bonusTriggerProducerConfig BonusTriggerProducerConfig[]
+  bonusTriggerProgressConfig BonusTriggerProgressConfig[]
+  bonusTriggerConsumerConfig BonusTriggerConsumerConfig[]
+
+  @@map("bonus_triggers")
+}
+
+model BonusTriggerProducerConfig {
+  id        String   @id @default(cuid())
+  bonusId   String   @map("bonus_id")
+  triggerId Int      @map("trigger_id")
+  type      String // deposit, bet_placing, bet_settlement, volume
+  target    String? // all, game, provider, category, game_type
+  config    Json
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  trigger BonusTrigger @relation(fields: [triggerId], references: [id])
+  bonus   Bonus        @relation(fields: [bonusId], references: [id])
+
+  @@index([bonusId])
+  @@index([triggerId])
+  @@map("bonus_trigger_producer_configs")
+}
+
+model BonusTriggerProgressConfig {
+  id        String   @id @default(cuid())
+  bonusId   String   @map("bonus_id")
+  triggerId Int      @map("trigger_id")
+  type      String // deposit, bet_placing, bet_settlement, volume
+  target    String? // all, game, provider, category, game_type
+  config    Json
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  trigger BonusTrigger @relation(fields: [triggerId], references: [id])
+  bonus   Bonus        @relation(fields: [bonusId], references: [id])
+
+  @@index([bonusId])
+  @@index([triggerId])
+  @@map("bonus_trigger_progress_configs")
+}
+
+model BonusTriggerConsumerConfig {
+  id        String   @id @default(cuid())
+  bonusId   String   @map("bonus_id")
+  triggerId Int      @map("trigger_id")
+  type      String // deposit, bet_placing, bet_settlement, volume
+  target    String? // all, game, provider, category, game_type
+  config    Json
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  trigger BonusTrigger @relation(fields: [triggerId], references: [id])
+  bonus   Bonus        @relation(fields: [bonusId], references: [id])
+
+  @@index([bonusId])
+  @@index([triggerId])
+  @@map("bonus_trigger_consumer_configs")
+}
+
+model UserBonusProgression {
+  id              String    @id @default(cuid())
+  bonusId         String    @map("bonus_id")
+  userId          String    @map("user_id")
+  bonusBalanceId  Int?      @map("bonus_balance_id")
+  targetProgress  Int       @map("target_progress")
+  currentProgress Int       @map("current_progress")
+  status          String    @default("PENDING") // pending, expired, completed
+  rewardAmount    Decimal   @map("reward_amount")
+  configOverride  Json?     @map("config_override")
+  isRefillable    Boolean   @default(false) @map("is_refillable")
+  expiresAt       DateTime? @map("expires_at")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  deletedAt       DateTime? @map("deleted_at")
+  claimedAt       DateTime? @map("claimed_at")
+
+  bonus            Bonus             @relation(fields: [bonusId], references: [id])
+  user             User              @relation(fields: [userId], references: [id])
+  bonusBalance     UserBonusBalance? @relation("UserBonusBalanceProgression", fields: [bonusBalanceId], references: [id])
+  couponCodeRedeem CouponCodeRedeem? @relation("CouponCodeProgress")
+  rewards          Reward?           @relation("RewardProgress")
+
+  @@unique([bonusBalanceId])
+  @@index([bonusId])
+  @@index([userId])
+  @@index([status])
+  @@map("user_bonus_progressions")
+}
+
+model UserBonusBalance {
+  id             Int       @id @default(autoincrement())
+  bonusId        String    @map("bonus_id")
+  userId         String    @map("user_id")
+  balance        Decimal
+  isWithdrawable Boolean   @default(false) @map("is_withdrawable")
+  expiresAt      DateTime? @map("expires_at")
+  createdAt      DateTime  @default(now()) @map("created_at")
+  updatedAt      DateTime  @updatedAt @map("updated_at")
+  deletedAt      DateTime? @map("deleted_at")
+
+  bonus            Bonus                 @relation(fields: [bonusId], references: [id])
+  user             User                  @relation(fields: [userId], references: [id])
+  // WageringProgress WageringProgress[]
+  bonusProgression UserBonusProgression? @relation("UserBonusBalanceProgression")
+
+  @@index([bonusId])
+  @@index([userId])
+  @@index([expiresAt])
+  @@map("user_bonus_balances")
+}
+
+model BonusEventLog {
+  id        Int      @id @default(autoincrement())
+  data      String   @map("data") @db.Text()
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("bonus_event_logs")
+}
+
+model PartnerMatrixEvent {
+  id        Int      @id @default(autoincrement())
+  data      Json
+  metadata  Json?
+  success   Boolean
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("partner_matrix_events")
+}
+
+model GameCategory {
+  id    String            @id
+  name  String            @unique
+  games SlotegratorGame[]
+
+  @@map("game_category")
+}
+
+model PokerRake {
+  id            Int      @id @default(autoincrement())
+  userId        String   @map("user_id")
+  user          User     @relation(fields: [userId], references: [id])
+  pokerPlayerId String   @map("poker_player_id")
+  rake          Decimal
+  uploadDate    DateTime @map("upload_date")
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  @@map("poker_rakes")
+}
+
+model PokerCode {
+  id            Int                     @id @default(autoincrement())
+  code          String                  @unique
+  useLimit      Int                     @map("use_limit")
+  reuseLimit    Int                     @map("reuse_limit")
+  expiresAt     DateTime                @map("expires_at")
+  rangeFrom     Decimal                 @map("range_from")
+  rangeTo       Decimal                 @map("range_to")
+  createdAt     DateTime                @default(now()) @map("created_at")
+  updatedAt     DateTime                @updatedAt @map("updated_at")
+  isDisabled    Boolean                 @default(false) @map("is_disabled")
+  isHighRoller  Boolean                 @default(false) @map("is_high_roller")
+  distributions PokerCodeDistribution[] @relation("PokerCodeDistributions")
+
+  createdById String @map("created_by_id") // The user who created the code
+  createdBy   User   @relation("PokerCodeCreatedBy", fields: [createdById], references: [id])
+
+  @@map("poker_codes")
+}
+
+model PokerCodeDistribution {
+  id                Int      @id @default(autoincrement())
+  distributionCount Int      @default(0) @map("distribution_count") // Tracks how many times a user received a specific code
+  userId            String   @map("user_id")
+  codeId            Int      @map("code_id")
+  createdAt         DateTime @default(now()) @map("created_at") // Tracks when a user was distributed the code
+  updatedAt         DateTime @updatedAt @map("updated_at")
+
+  user User      @relation("UserPokerCodeDistributions", fields: [userId], references: [id])
+  code PokerCode @relation("PokerCodeDistributions", fields: [codeId], references: [id])
+
+  @@unique([userId, codeId])
+  @@map("poker_code_distributions")
+}
+
+model CouponCode {
+  id          Int    @id @default(autoincrement())
+  createdById String @map("created_by_id")
+
+  code    String @unique
+  type    Int    @db.SmallInt()
+  stock   Int
+  config  Json
+  bonusId String @map("bonus_id")
+
+  createdBy         User                @relation(fields: [createdById], references: [id])
+  couponCodeRedeems CouponCodeRedeem[]
+  bonus             Bonus               @relation(fields: [bonusId], references: [id])
+  groups            CouponCodeOnGroup[]
+
+  expiresAt  DateTime? @map("expires_at")
+  disabledAt DateTime? @map("disabled_at")
+  createdAt  DateTime  @default(now()) @map("created_at")
+  updatedAt  DateTime  @updatedAt @map("updated_at")
+
+  @@index([createdById])
+  @@index([bonusId])
+  @@map("coupon_codes")
+}
+
+model CouponGroup {
+  id          Int       @id @default(autoincrement())
+  name        String
+  description String?
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+  deletedAt   DateTime? @map("deleted_at")
+
+  coupons CouponCodeOnGroup[]
+
+  @@map("coupon_group")
+}
+
+model CouponCodeOnGroup {
+  couponCodeId Int       @map("coupon_code_id")
+  groupId      Int       @map("group_id")
+  deletedAt    DateTime? @map("deleted_at")
+
+  couponCode CouponCode  @relation(fields: [couponCodeId], references: [id])
+  group      CouponGroup @relation(fields: [groupId], references: [id])
+
+  @@id([couponCodeId, groupId])
+  @@map("coupon_code_on_group")
+}
+
+model CouponCodeRedeem {
+  id              Int     @id @default(autoincrement())
+  couponCodeId    Int     @map("coupon_code_id")
+  redeemerId      String  @map("redeemer_id")
+  bonusProgressId String? @map("bonus_progress_id")
+  consumed        Boolean @default(false) @map("consumed")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  redeemer      User                  @relation(fields: [redeemerId], references: [id])
+  couponCode    CouponCode            @relation(fields: [couponCodeId], references: [id])
+  bonusProgress UserBonusProgression? @relation("CouponCodeProgress", fields: [bonusProgressId], references: [id])
+
+  @@unique([couponCodeId, redeemerId])
+  @@unique([bonusProgressId])
+  @@index([couponCodeId])
+  @@index([redeemerId])
+  @@index([createdAt])
+  @@map("coupon_code_redeems")
+}
+
+model Reward {
+  id              Int     @id @default(autoincrement())
+  userId          String  @map("user_id")
+  senderId        String  @map("sender_id")
+  bonusProgressId String? @map("bonus_progress_id")
+  amount          Decimal
+  /// [tip, reward]
+  type            String  @default("tip") @map("type") // tip, reward
+  description     String? @map("description") @db.VarChar(80) // tip, bonus
+
+  createdAt DateTime  @default(now()) @map("created_at")
+  updatedAt DateTime  @updatedAt @map("updated_at")
+  deletedAt DateTime? @map("deleted_at")
+
+  user          User                  @relation("RewardReceiver", fields: [userId], references: [id])
+  sender        User                  @relation("RewardSender", fields: [senderId], references: [id])
+  bonusProgress UserBonusProgression? @relation("RewardProgress", fields: [bonusProgressId], references: [id])
+
+  @@unique([bonusProgressId])
+  @@index([createdAt])
+  @@index([userId])
+  @@map("rewards")
+}
+
+model UserPreference {
+  id     Int    @id @default(autoincrement())
+  userId String @unique @map("user_id")
+  user   User   @relation(fields: [userId], references: [id])
+
+  language           String?
+  exchangeWidgetPair String? @map("exchange_widget_pair")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([userId])
+  @@map("user_preferences")
+}
+
+model Avatar {
+  id        Int      @id @default(autoincrement())
+  url       String
+  order     Int      @map("order")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@map("avatars")
+}
+
+model Media {
+  id         String   @id @default(cuid())
+  url        String
+  path       String
+  entityId   String   @map("entity_id") @db.VarChar(40)
+  entityType String   @map("entity_type") @db.VarChar(30)
+  type       String   @map("type") @db.VarChar(30)
+  createdAt  DateTime @default(now()) @map("created_at")
+  updatedAt  DateTime @updatedAt @map("updated_at")
+
+  user User? @relation(fields: [entityId, entityType], references: [id, mediaType])
+
+  @@index([entityId, entityType])
+  @@map("media")
+}
+
+model CountryProvidersBlacklist {
+  id        Int      @id @default(autoincrement())
+  country   String   @unique @db.VarChar(3)
+  providers String[] @db.Text
+
+  @@map("country_providers_blacklist")
+}
+
+model PushSubscription {
+  id        String   @id @default(cuid())
+  userId    String   @map("user_id")
+  endpoint  String   @db.Text()
+  p256dh    String   @map("p256dh_key") @db.Text()
+  auth      String   @map("auth_key") @db.Text()
+  userAgent String?  @map("user_agent") @db.Text()
+  isActive  Boolean  @default(true) @map("is_active")
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([endpoint, userId])
+  @@index([userId])
+  @@index([isActive])
+  @@map("push_subscriptions")
+}

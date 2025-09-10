@@ -1,0 +1,3 @@
+export const SOLANA_USDT_DECIMALS = 6;
+export const SOLANA_USDC_DECIMALS = 6;
+export const SOLANA_LAMPORTS_DECIMALS = 9;

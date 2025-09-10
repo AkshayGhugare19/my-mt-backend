@@ -1,0 +1,5 @@
+ALTER TABLE "users"
+ADD COLUMN IF NOT EXISTS "provider" TEXT;
+
+ALTER TABLE "users"
+ADD COLUMN IF NOT EXISTS "socialProviderId" TEXT;

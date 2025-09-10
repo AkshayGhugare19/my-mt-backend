@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Seu saldo foi ajustado",
+      "message": "Seu saldo foi ajustado em {amount} por {masterName}."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Seu bônus chegou",
+      "message": "Você recebeu {amount} USD de {bonusName}."
+    },
+    "rollover_started": {
+      "title": "Você ganhou um bônus! Complete o rollover para desbloquear {amount} USD",
+      "message": "Parabéns pelo seu {bonusName}! Complete os requisitos de rollover de {rollover} para desbloquear sua recompensa de {amount} USD. Comece agora e faça com que seja seu!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Depósito realizado com sucesso",
+      "message": "Seu depósito de {amount} foi realizado com sucesso."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Solicitação de recarga criada",
+      "message": "Uma nova solicitação de recarga para {amount} tokens foi criada."
+    },
+    "approved": {
+      "title": "Solicitação de recarga aprovada",
+      "message": "Sua solicitação de recarga para {amount} tokens foi aprovada."
+    },
+    "rejected": {
+      "title": "Solicitação de recarga rejeitada",
+      "message": "Sua solicitação de recarga para {amount} tokens foi rejeitada."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Solicitação de liquidação criada",
+      "message": "Você tem uma nova solicitação de liquidação para {amount} tokens."
+    },
+    "created_by_supermaster": {
+      "title": "Solicitação de liquidação criada",
+      "message": "O SuperMaster {superMasterName} iniciou uma nova solicitação de liquidação para {amount} tokens."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Solicitação de retirada criada",
+      "message": "Uma solicitação de retirada de {amount} foi criada."
+    },
+    "approved": {
+      "title": "Solicitação de retirada aprovada",
+      "message": "Uma solicitação de retirada de {amount} foi aprovada."
+    },
+    "completed": {
+      "title": "Solicitação de retirada concluída",
+      "message": "Sua solicitação de retirada de {amount} foi concluída."
+    },
+    "rejected": {
+      "title": "Solicitação de retirada rejeitada",
+      "message": "Sua solicitação de retirada de {amount} foi rejeitada."
+    },
+    "failed": {
+      "title": "Falha na solicitação de retirada",
+      "message": "Uma solicitação de retirada de {amount} falhou ao ser enviada."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Aviso de saldo da carteira de saque Tron",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDT. Saldo atual de USDT: {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Aviso de saldo da carteira de saque Tron",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDC. Saldo atual de USDC: {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Aviso de saldo da carteira de saque Tron",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} TRX. Saldo atual de TRX: {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Aviso de saldo da carteira de saque Solana",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDT. Saldo atual de USDT: {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Aviso de saldo da carteira de saque Solana",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDC. Saldo atual de USDC: {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Aviso de saldo da carteira de saque Solana",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} SOL. Saldo atual de SOL: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Aviso de saldo da carteira de saque Ethereum",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDT. Saldo atual de USDT: {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Aviso de saldo da carteira de saque Ethereum",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} ETH. Saldo atual de ETH: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Aviso de saldo da carteira de saque Ethereum",
+      "message": "O saldo da carteira de retirada está abaixo de {limit} USDC. Saldo atual de USDC: {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Seu código de poker chegou",
+      "message": "Você recebeu o seguinte código de poker: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Você recebeu uma dica",
+      "message": "Você recebeu {amount} USD de {sender}."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Você recebeu uma recompensa",
+      "message": "Você recebeu uma {amount} USD recompensa - {description}."
+    }
+  }
+}

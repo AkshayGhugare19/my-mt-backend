@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Ваш баланс был скорректирован",
+      "message": "Ваш баланс был скорректирован на {amount} пользователем {masterName}."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Ваш бонус поступил",
+      "message": "Вы получили {amount} USD в рамках {bonusName}."
+    },
+    "rollover_started": {
+      "title": "Вы заработали бонус! Завершите оборот, чтобы получить {amount} USD",
+      "message": "Поздравляем с вашим {bonusName}! Выполните условия оборота в размере {rollover}, чтобы получить свой бонус {amount} USD. Начните сейчас и заберите его!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Пополнение прошло успешно",
+      "message": "Пополнение на {amount} прошло успешно."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Запрос на пополнение создан",
+      "message": "Создан новый запрос на пополнение на {amount} токенов."
+    },
+    "approved": {
+      "title": "Запрос на пополнение одобрен",
+      "message": "Ваш запрос на пополнение на {amount} токенов был одобрен."
+    },
+    "rejected": {
+      "title": "Запрос на пополнение отклонён",
+      "message": "Ваш запрос на пополнение на {amount} токенов был отклонён."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Запрос на расчет создан",
+      "message": "У вас новый запрос на расчет на {amount} токенов."
+    },
+    "created_by_supermaster": {
+      "title": "Запрос на расчет создан",
+      "message": "Супермастер {superMasterName} инициировал новый запрос на расчет на {amount} токенов."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Запрос на вывод средств создан",
+      "message": "Создан запрос на вывод средств в размере {amount}."
+    },
+    "approved": {
+      "title": "Запрос на вывод средств одобрен",
+      "message": "Запрос на вывод средств в размере {amount} был одобрен."
+    },
+    "completed": {
+      "title": "Запрос на вывод средств выполнен",
+      "message": "Ваш запрос на вывод средств в размере {amount} был выполнен."
+    },
+    "rejected": {
+      "title": "Запрос на вывод средств отклонён",
+      "message": "Ваш запрос на вывод средств в размере {amount} был отклонён."
+    },
+    "failed": {
+      "title": "Запрос на вывод средств не выполнен",
+      "message": "Не удалось выполнить запрос на вывод средств в размере {amount}."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Tron",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDT. Текущий баланс USDT: {balance}."
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Tron",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDC. Текущий баланс USDC: {balance}."
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Tron",
+      "message": "Баланс кошелька для вывода средств ниже {limit} TRX. Текущий баланс TRX: {balance}."
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Solana",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDT. Текущий баланс USDT: {balance}."
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Solana",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDC. Текущий баланс USDC: {balance}."
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Solana",
+      "message": "Баланс кошелька для вывода средств ниже {limit} SOL. Текущий баланс SOL: {balance}."
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Ethereum",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDT. Текущий баланс USDT: {balance}."
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Ethereum",
+      "message": "Баланс кошелька для вывода средств ниже {limit} USDC. Текущий баланс USDC: {balance}."
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Предупреждение о балансе кошелька для вывода Ethereum",
+      "message": "Баланс кошелька для вывода средств ниже {limit} ETH. Текущий баланс ETH: {balance}."
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Ваш покерный код пришел",
+      "message": "Вы получили следующий покерный код: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Вы получили чаевые",
+      "message": "Вы получили {amount} USD от {sender}."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Вы получили награду",
+      "message": "Вы получили {amount} USD награду - {description}."
+    }
+  }
+}

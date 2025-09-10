@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Saldoasi on muutettu",
+      "message": "Saldoasi on muutettu {amount}, tekijä {masterName}."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Bonuksesi on saapunut",
+      "message": "Olet saanut {amount} USD {bonusName}."
+    },
+    "rollover_started": {
+      "title": "Olet saanut bonuksen! Suorita rollover saadaksesi {amount} USD",
+      "message": "Onnittelut {bonusName}:sta! Suorita rollover-vaatimukset {rollover} saadaksesi palkkiosi {amount} USD. Aloita heti!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Lataus onnistui",
+      "message": "Lataus {amount} onnistui."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Latauspyyntö luotu",
+      "message": "Uusi latauspyyntö {amount} tokenille on luotu."
+    },
+    "approved": {
+      "title": "Latauspyyntö hyväksytty",
+      "message": "Latauspyyntösi {amount} tokenille on hyväksytty."
+    },
+    "rejected": {
+      "title": "Latauspyyntö hylätty",
+      "message": "Latauspyyntösi {amount} tokenille on hylätty."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Maksupyyntö luotu",
+      "message": "Sinulla on uusi maksuvaatimus {amount} tokenille."
+    },
+    "created_by_supermaster": {
+      "title": "Maksupyyntö luotu",
+      "message": "SuperMaster {superMasterName} on aloittanut uuden maksuvaatimuksen {amount} tokenille."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Nostopyyntö luotu",
+      "message": "{amount} summan nostopyyntö on luotu."
+    },
+    "approved": {
+      "title": "Nostopyyntö hyväksytty",
+      "message": "{amount} summan nostopyyntö on hyväksytty."
+    },
+    "completed": {
+      "title": "Nostopyyntö suoritettu",
+      "message": "Nostopyyntösi summalle {amount} on suoritettu."
+    },
+    "rejected": {
+      "title": "Nostopyyntö hylätty",
+      "message": "Nostopyyntösi summalle {amount} on hylätty."
+    },
+    "failed": {
+      "title": "Nostopyyntö epäonnistui",
+      "message": "{amount} summan nostopyyntöä ei voitu lähettää."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Tron-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDT. Nykyinen USDT-saldo on {balance}."
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Tron-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDC. Nykyinen USDC-saldo on {balance}."
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Tron-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} TRX. Nykyinen TRX-saldo on {balance}."
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Solana-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDT. Nykyinen USDT-saldo on {balance}."
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Solana-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDC. Nykyinen USDC-saldo on {balance}."
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Solana-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} SOL. Nykyinen SOL-saldo on {balance}."
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Ethereum-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDT. Nykyinen USDT-saldo on {balance}."
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Ethereum-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} USDC. Nykyinen USDC-saldo on {balance}."
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Ethereum-noston lompakon saldovaroitus",
+      "message": "Nostolompakon saldo on alle {limit} ETH. Nykyinen ETH-saldo on {balance}."
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Poker-koodisi on saapunut",
+      "message": "Olet vastaanottanut seuraavan poker-koodin: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Olet saanut tipan",
+      "message": "Olet saanut {amount} USD tipan lähettäjältä {sender}."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Olet saanut palkinnon",
+      "message": "Olet saanut {amount} USD palkinnon - {description}."
+    }
+  }
+}

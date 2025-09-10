@@ -1,0 +1,42 @@
+-- This is an empty migration.
+
+INSERT INTO public.permissions ("id","name") VALUES
+(1,'read_roles'),
+(2,'read_permissions'),
+(3,'edit_permissions'),
+(4,'read_user'),
+(5,'read_vip'),
+(6,'create_vip'),
+(7,'read_master'),
+(8,'read_master_own_details'),
+(9,'read_super_master_own_details'),
+(10,'create_master'),
+(11,'read_user_details'),
+(12,'read_user_maxbet'),
+(13,'edit_user_maxbet'),
+(14,'read_user_withdrawal_availability'),
+(15,'edit_user_withdrawal_availability'),
+(16,'read_vip_details'),
+(17,'read_vip_maxbet'),
+(18,'edit_vip_maxbet'),
+(19,'read_master_details'),
+(20,'read_master_pnl'),
+(21,'read_master_nrusers'),
+(22,'read_master_maxexposurepervip'),
+(23,'edit_master_maxexposurepervip'),
+(24,'read_master_maxnumberusers'),
+(25,'edit_master_maxnumberusers'),
+(26,'read_supermaster_details'),
+(27,'read_dashboard'),
+(28,'read_token_requests'),
+(29,'create_token_requests_vip'),
+(30,'create_token_requests_master'),
+(31,'read_token_withdrawal'),
+(32,'read_settlements');
+
+INSERT INTO public.role_permissions ("role_id","permission_id") VALUES
+(1,1),
+(1,2),
+(1,3),
+(2,8),
+(1,9);

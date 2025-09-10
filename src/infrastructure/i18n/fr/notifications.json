@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Votre solde a été ajusté",
+      "message": "Votre solde a été ajusté de {amount} par {masterName}."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Votre bonus est arrivé",
+      "message": "Vous avez reçu {amount} USD de la part du {bonusName}."
+    },
+    "rollover_started": {
+      "title": "Vous avez gagné un bonus ! Complétez le rollover pour débloquer {amount} USD",
+      "message": "Félicitations pour votre {bonusName} ! Complétez les conditions de rollover de {rollover} pour débloquer votre récompense de {amount} USD. Commencez dès maintenant pour la faire vôtre !"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Dépôt réussi",
+      "message": "Votre dépôt de {amount} a été réussi."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Demande de rechargement créée",
+      "message": "Une nouvelle demande de rechargement pour {amount} jetons a été créée."
+    },
+    "approved": {
+      "title": "Demande de rechargement approuvée",
+      "message": "Votre demande de rechargement pour {amount} jetons a été approuvée."
+    },
+    "rejected": {
+      "title": "Demande de rechargement rejetée",
+      "message": "Votre demande de rechargement pour {amount} jetons a été rejetée."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Demande de règlement créée",
+      "message": "Vous avez une nouvelle demande de règlement pour {amount} jetons."
+    },
+    "created_by_supermaster": {
+      "title": "Demande de règlement créée",
+      "message": "Le SuperMaster {superMasterName} a initié une nouvelle demande de règlement pour {amount} jetons."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Demande de retrait créée",
+      "message": "Une demande de retrait de {amount} a été créée."
+    },
+    "approved": {
+      "title": "Demande de retrait approuvée",
+      "message": "Une demande de retrait de {amount} a été approuvée."
+    },
+    "completed": {
+      "title": "Demande de retrait complétée",
+      "message": "Votre demande de retrait de {amount} a été complétée."
+    },
+    "rejected": {
+      "title": "Demande de retrait rejetée",
+      "message": "Votre demande de retrait de {amount} a été rejetée."
+    },
+    "failed": {
+      "title": "Échec de la demande de retrait",
+      "message": "Une demande de retrait de {amount} n'a pas pu être envoyée."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Tron",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDT. Solde actuel de USDT : {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Tron",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDC. Solde actuel de USDC : {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Tron",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} TRX. Solde actuel de TRX : {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Solana",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDT. Solde actuel de USDT : {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Solana",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDC. Solde actuel de USDC : {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Solana",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} SOL. Solde actuel de SOL : {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Ethereum",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDT. Solde actuel de USDT : {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Ethereum",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} USDC. Solde actuel de USDC : {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Avertissement de solde du portefeuille de retrait Ethereum",
+      "message": "Le solde du portefeuille de retrait est inférieur à {limit} ETH. Solde actuel de ETH : {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Votre code poker est arrivé",
+      "message": "Vous avez reçu le code poker suivant : {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Vous avez reçu un don",
+      "message": "Vous avez reçu {amount} USD du donateur {sender}."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Vous avez reçu une récompense",
+      "message": "Vous avez reçu une {amount} USD récompense - {description}."
+    }
+  }
+}

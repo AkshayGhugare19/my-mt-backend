@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "address": "0.0.0.0",
+        "localRoot": "${workspaceFolder}",
+        "name": "debug royalstakes",
+        "sourceMaps": true,
+        "resolveSourceMapLocations": [
+          "${workspaceFolder}/**",
+          "!**/node_modules/**"
+        ],
+        "restart": true,
+        "port": 9229,
+        "remoteRoot": "/usr/src/app",
+        "request": "attach",
+        "type": "node"
+      },
+    ]
+  }

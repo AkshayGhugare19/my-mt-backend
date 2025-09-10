@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "잔액이 조정되었습니다",
+      "message": "{masterName}에 의해 잔액이 {amount} 조정되었습니다."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "보너스가 도착했습니다",
+      "message": "{bonusName}로부터 {amount} USD를 받았습니다."
+    },
+    "rollover_started": {
+      "title": "보너스를 획득했습니다! {amount} USD를 잠금 해제하려면 롤오버를 완료하세요",
+      "message": "{bonusName}를 축하합니다! {amount} USD 보상을 잠금 해제하려면 {rollover}의 롤오버 조건을 완료하세요. 지금 시작하여 당신의 것으로 만드세요!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "입금이 성공했습니다",
+      "message": "{amount} 입금이 성공했습니다."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "충전 요청이 생성되었습니다",
+      "message": "{amount} 토큰에 대한 새로운 충전 요청이 생성되었습니다."
+    },
+    "approved": {
+      "title": "충전 요청이 승인되었습니다",
+      "message": "{amount} 토큰에 대한 충전 요청이 승인되었습니다."
+    },
+    "rejected": {
+      "title": "충전 요청이 거부되었습니다",
+      "message": "{amount} 토큰에 대한 충전 요청이 거부되었습니다."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "정산 요청이 생성되었습니다",
+      "message": "{amount} 토큰에 대한 새로운 정산 요청이 있습니다."
+    },
+    "created_by_supermaster": {
+      "title": "정산 요청이 생성되었습니다",
+      "message": "슈퍼마스터 {superMasterName}가 {amount} 토큰에 대한 새로운 정산 요청을 시작했습니다."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "출금 요청이 생성되었습니다",
+      "message": "{amount}의 출금 요청이 생성되었습니다."
+    },
+    "approved": {
+      "title": "출금 요청이 승인되었습니다",
+      "message": "{amount}의 출금 요청이 승인되었습니다."
+    },
+    "completed": {
+      "title": "출금 요청이 완료되었습니다",
+      "message": "{amount}의 출금 요청이 완료되었습니다."
+    },
+    "rejected": {
+      "title": "출금 요청이 거부되었습니다",
+      "message": "{amount}의 출금 요청이 거부되었습니다."
+    },
+    "failed": {
+      "title": "출금 요청 실패",
+      "message": "{amount}의 출금 요청을 전송할 수 없습니다."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Tron 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDT 미만입니다. 현재 USDT 잔액: {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Tron 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDC 미만입니다. 현재 USDC 잔액: {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Tron 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} TRX 미만입니다. 현재 TRX 잔액: {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Solana 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDT 미만입니다. 현재 USDT 잔액: {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Solana 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDC 미만입니다. 현재 USDC 잔액: {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Solana 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} SOL 미만입니다. 현재 SOL 잔액: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Ethereum 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDT 미만입니다. 현재 USDT 잔액: {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Ethereum 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} ETH 미만입니다. 현재 ETH 잔액: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Ethereum 출금 지갑 잔액 경고",
+      "message": "출금 지갑의 잔액이 {limit} USDC 미만입니다. 현재 USDC 잔액: {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "당신의 포커 코드가 도착했습니다",
+      "message": "다음 포커 코드를 받았습니다: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "팁을 받았습니다",
+      "message": "{amount} USD를 {sender}에게서 받았습니다."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "보상을 받았습니다",
+      "message": "{amount} USD 보상 - {description}."
+    }
+  }
+}

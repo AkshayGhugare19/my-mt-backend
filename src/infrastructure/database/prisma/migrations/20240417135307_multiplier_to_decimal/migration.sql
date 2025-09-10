@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "users" ALTER COLUMN "multiplier" SET DEFAULT 1,
+ALTER COLUMN "multiplier" SET DATA TYPE DECIMAL(65,30);

@@ -53,6 +53,10 @@ Dockerfile
 Dockerfile.dev
 Dockerfile.test
 
+k8s/deployment.yml
+k8s/ingress.yml
+k8s/service.yml
+.github/workflows/ci-cd.yml
 .cursor/
 .env
 .env.local

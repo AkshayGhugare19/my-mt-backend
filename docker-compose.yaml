@@ -1,0 +1,189 @@
+version: '3.8'
+name: royalstakes
+services:
+  proxy:
+    container_name: proxy
+    image: nginx:alpine
+    hostname: proxy
+    ports:
+      - ${REVERSE_PROXY_PORT-80}:80
+    environment:
+      - APP_PORT=${APP_PORT}
+      - REVERSE_PROXY_PORT=${REVERSE_PROXY_PORT}
+    env_file:
+      - .env
+    volumes:
+      - ./conf:/etc/nginx/templates
+    networks:
+      - royalstakes
+    command: [nginx-debug, '-g', 'daemon off;']
+
+  redis:
+    container_name: royalstakes-redis
+    image: redis:alpine
+    hostname: redis
+    ports:
+      - ${REDIS_FORWARD_PORT}:${REDIS_PORT}
+    volumes:
+      - redis-royalstakes-data:/data
+    networks:
+      - royalstakes
+    healthcheck:
+      test: ['CMD', 'redis-cli', 'ping']
+      retries: 3
+      timeout: 5s
+
+  soketi:
+    image: 'quay.io/soketi/soketi:latest-16-alpine'
+    depends_on:
+      - redis
+    environment:
+      SOKETI_DEBUG: 1
+      SOKETI_ADAPTER_DRIVER: redis
+      SOKETI_DB_REDIS_HOST: 'redis'
+      SOKETI_DB_REDIS_PORT: ${REDIS_PORT}
+      SOKETI_DB_REDIS_DB: '2'
+    networks:
+      - royalstakes
+    ports:
+      - ${PUSHER_FORWARD_PORT}:${PUSHER_PORT}
+    command: soketi start --config=/config.json
+    volumes:
+      - ./src/infrastructure/realtime/soketi-config.json:/config.json
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.13-management-alpine
+    hostname: rabbitmq
+    env_file:
+      - .env
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD}
+      RABBITMQ_PORT: ${RABBITMQ_PORT}
+    ports:
+      - ${RABBITMQ_PORT}:${RABBITMQ_PORT}
+      - 15672:15672
+    networks:
+      - royalstakes
+    healthcheck:
+      test: ['CMD', 'rabbitmqctl', 'status']
+      interval: 5s
+      retries: 3
+      timeout: 5s
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+
+  postgres:
+    container_name: royalstakes-postgres
+    image: timescale/timescaledb:latest-pg16
+    hostname: ${POSTGRES_HOST}
+    restart: always
+    ports:
+      - ${POSTGRES_FORWARD_PORT}:${POSTGRES_PORT}
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - ./src/infrastructure/database/prisma/init:/docker-entrypoint-initdb.d
+      - pg-timescale-data:/var/lib/postgresql/data
+    networks:
+      - royalstakes
+  pgbouncer:
+    image: bitnami/pgbouncer:latest
+    container_name: royalstakes-pgbouncer
+    hostname: ${PGBOUNCER_HOST}
+    environment:
+      - POSTGRESQL_HOST=postgres
+      - POSTGRESQL_USERNAME=${POSTGRES_USER}
+      - POSTGRESQL_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRESQL_DATABASE=${POSTGRES_DB}
+      - PGBOUNCER_DATABASE=${POSTGRES_DB}
+      - POSTGRESQL_PORT=${POSTGRES_PORT}
+    ports:
+      - ${PGBOUNCER_PORT}:${PGBOUNCER_PORT}
+    networks:
+      - royalstakes
+
+  app:
+    container_name: royalstakes-app
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    init: true
+    # uncomment this to run the app in dev mode
+    command: npm run start:debug
+    ports:
+      - ${APP_FORWARD_PORT}:${APP_PORT}
+      - 9229:9229
+    tty: true
+    build:
+      context: .
+      # uncomment this to run the app in dev mode
+      dockerfile: ./Dockerfile.dev
+      # dockerfile: ./Dockerfile
+    depends_on:
+      - soketi
+      - rabbitmq
+      - redis
+      - postgres
+    env_file:
+      - .env
+      # - .env.backend
+    networks:
+      - royalstakes
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+
+  minio:
+    container_name: royalstakes-minio
+    image: minio/minio
+    hostname: minio
+    ports:
+      - ${MINIO_API_PORT-9000}:9000
+      - ${MINIO_CONSOLE_PORT-9001}:9001
+    environment:
+      MINIO_ROOT_USER: ${MINIO_ROOT_USER:-minioadmin}
+      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD:-minioadmin}
+      MINIO_SITE_REGION: ${MINIO_SITE_REGION:-eu-central-1}
+    volumes:
+      - minio-data:/data
+    networks:
+      - royalstakes
+    command: server /data --console-address ":9001"
+    healthcheck:
+      test: ['CMD', 'mc', 'ready', 'local']
+      interval: 5s
+      timeout: 5s
+      retries: 3
+
+  # minio-init:
+  #   image: minio/mc
+  #   depends_on:
+  #     - minio
+  #   entrypoint: >
+  #     /bin/sh -c "
+  #     sleep 5;
+  #     mc alias set myminio http://minio:9000 ${MINIO_ROOT_USER:-minioadmin} ${MINIO_ROOT_PASSWORD:-minioadmin};
+  #     mc mb --ignore-existing myminio/${SPACE_BUCKET_NAME:-royalstakes};
+  #     mc policy set download myminio/${SPACE_BUCKET_NAME:-royalstakes};
+  #     mc admin accesskey create myminio/${SPACE_BUCKET_NAME:-royalstakes} --access-key=${SPACES_KEY_ID} --secret-key=${SPACES_ACCESS_KEY};
+  #     exit 0;
+  #     "
+  #   networks:
+  #     - royalstakes
+
+networks:
+  royalstakes:
+    driver: bridge
+
+volumes:
+  redis-royalstakes-data:
+    driver: local
+  pg-timescale-data:
+    driver: local
+  rabbitmq-data:
+    driver: local
+  minio-data:
+    driver: local

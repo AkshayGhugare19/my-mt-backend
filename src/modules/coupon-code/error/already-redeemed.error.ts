@@ -1,0 +1,11 @@
+import { ErrorMessages } from '@common/enums/error-messages.enum';
+import { SerializableException } from '@common/error/serializable-exception.error';
+import { HttpStatus } from '@nestjs/common';
+
+export class CouponCodeAlreadyRedeemedError extends SerializableException {
+  defaultResponseCode = HttpStatus.CONFLICT;
+
+  constructor() {
+    super({ message: ErrorMessages.COUPON_CODE_ALREADY_REDEEMED });
+  }
+}

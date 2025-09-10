@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "Ihr Guthaben wurde angepasst",
+      "message": "Ihr Guthaben wurde um {amount} von {masterName} angepasst."
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "Ihr Bonus ist angekommen",
+      "message": "Sie haben {amount} USD von {bonusName} erhalten."
+    },
+    "rollover_started": {
+      "title": "Sie haben einen Bonus erhalten! Schließen Sie den Rollover ab, um {amount} USD freizuschalten",
+      "message": "Glückwunsch zu Ihrem {bonusName}! Erfüllen Sie die Rollover-Anforderungen von {rollover}, um Ihre Belohnung von {amount} USD freizuschalten. Beginnen Sie jetzt und machen Sie es sich zu eigen!"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "Einzahlung erfolgreich",
+      "message": "Ihre Einzahlung von {amount} wurde erfolgreich durchgeführt."
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "Aufladeanforderung erstellt",
+      "message": "Eine neue Aufladeanforderung für {amount} Token wurde erstellt."
+    },
+    "approved": {
+      "title": "Aufladeanforderung genehmigt",
+      "message": "Ihre Aufladeanforderung für {amount} Token wurde genehmigt."
+    },
+    "rejected": {
+      "title": "Aufladeanforderung abgelehnt",
+      "message": "Ihre Aufladeanforderung für {amount} Token wurde abgelehnt."
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "Abrechnungsanforderung erstellt",
+      "message": "Sie haben eine neue Abrechnungsanforderung für {amount} Token."
+    },
+    "created_by_supermaster": {
+      "title": "Abrechnungsanforderung erstellt",
+      "message": "Der SuperMaster {superMasterName} hat eine neue Abrechnungsanforderung für {amount} Token initiiert."
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "Auszahlungsanforderung erstellt",
+      "message": "Eine Auszahlungsanforderung über {amount} wurde erstellt."
+    },
+    "approved": {
+      "title": "Auszahlungsanforderung genehmigt",
+      "message": "Eine Auszahlungsanforderung über {amount} wurde genehmigt."
+    },
+    "completed": {
+      "title": "Auszahlungsanforderung abgeschlossen",
+      "message": "Ihre Auszahlungsanforderung über {amount} wurde abgeschlossen."
+    },
+    "rejected": {
+      "title": "Auszahlungsanforderung abgelehnt",
+      "message": "Ihre Auszahlungsanforderung über {amount} wurde abgelehnt."
+    },
+    "failed": {
+      "title": "Auszahlungsanforderung fehlgeschlagen",
+      "message": "Eine Auszahlungsanforderung über {amount} konnte nicht gesendet werden."
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Warnung: Tron-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDT gefallen. Aktuelles USDT-Guthaben: {balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Warnung: Tron-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDC gefallen. Aktuelles USDC-Guthaben: {balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Warnung: Tron-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} TRX gefallen. Aktuelles TRX-Guthaben: {balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Warnung: Solana-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDT gefallen. Aktuelles USDT-Guthaben: {balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Warnung: Solana-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDC gefallen. Aktuelles USDC-Guthaben: {balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Warnung: Solana-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} SOL gefallen. Aktuelles SOL-Guthaben: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Warnung: Ethereum-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDT gefallen. Aktuelles USDT-Guthaben: {balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Warnung: Ethereum-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} USDC gefallen. Aktuelles USDC-Guthaben: {balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Warnung: Ethereum-Abhebungs-Wallet-Saldo",
+      "message": "Das Guthaben im Auszahlungs-Wallet ist unter {limit} ETH gefallen. Aktuelles ETH-Guthaben: {balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "Ihr Poker-Code ist angekommen",
+      "message": "Sie haben den folgenden Poker-Code erhalten: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "Sie haben eine Tippabgabe erhalten",
+      "message": "Sie haben {amount} USD von {sender} erhalten."
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "Sie haben eine Belohnung erhalten",
+      "message": "Sie haben eine {amount} USD Belohnung - {description}."
+    }
+  }
+}

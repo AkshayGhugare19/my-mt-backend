@@ -1,0 +1,126 @@
+{
+  "balance": {
+    "adjusted": {
+      "title": "残高が調整されました",
+      "message": "{masterName} により残高が {amount} 調整されました。"
+    }
+  },
+  "bonus": {
+    "received": {
+      "title": "ボーナスが届きました",
+      "message": "{bonusName} から {amount} 米ドルを受け取りました。"
+    },
+    "rollover_started": {
+      "title": "ボーナスを獲得しました！{amount} 米ドルをアンロックするためにロールオーバーを完了してください",
+      "message": "{bonusName} をおめでとうございます！{rollover} のロールオーバー条件を完了して、{amount} 米ドルの報酬をアンロックしてください。今すぐ始めて、自分のものにしましょう！"
+    }
+  },
+  "deposit": {
+    "success": {
+      "title": "入金が成功しました",
+      "message": "{amount} の入金が成功しました。"
+    }
+  },
+  "topup_request": {
+    "created": {
+      "title": "チャージリクエストが作成されました",
+      "message": "{amount} トークンの新しいチャージリクエストが作成されました。"
+    },
+    "approved": {
+      "title": "チャージリクエストが承認されました",
+      "message": "{amount} トークンのチャージリクエストが承認されました。"
+    },
+    "rejected": {
+      "title": "チャージリクエストが拒否されました",
+      "message": "{amount} トークンのチャージリクエストが拒否されました。"
+    }
+  },
+  "settlement_request": {
+    "created_by_user": {
+      "title": "決済リクエストが作成されました",
+      "message": "{amount} トークンの新しい決済リクエストがあります。"
+    },
+    "created_by_supermaster": {
+      "title": "決済リクエストが作成されました",
+      "message": "スーパー マスター {superMasterName} によって {amount} トークンの新しい決済リクエストが開始されました。"
+    }
+  },
+  "withdrawal_request": {
+    "created": {
+      "title": "引き出しリクエストが作成されました",
+      "message": "{amount} の引き出しリクエストが作成されました。"
+    },
+    "approved": {
+      "title": "引き出しリクエストが承認されました",
+      "message": "{amount} の引き出しリクエストが承認されました。"
+    },
+    "completed": {
+      "title": "引き出しリクエストが完了しました",
+      "message": "{amount} の引き出しリクエストが完了しました。"
+    },
+    "rejected": {
+      "title": "引き出しリクエストが拒否されました",
+      "message": "{amount} の引き出しリクエストが拒否されました。"
+    },
+    "failed": {
+      "title": "引き出しリクエストの失敗",
+      "message": "{amount} の引き出しリクエストを送信できませんでした。"
+    }
+  },
+  "warning": {
+    "tron_withdrawal_wallet_usdt_balance": {
+      "title": "Tron出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDT 未満です。現在の USDT 残高：{balance}"
+    },
+    "tron_withdrawal_wallet_usdc_balance": {
+      "title": "Tron出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDC 未満です。現在の USDC 残高：{balance}"
+    },
+    "tron_withdrawal_wallet_trx_balance": {
+      "title": "Tron出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} TRX 未満です。現在の TRX 残高：{balance}"
+    },
+    "solana_withdrawal_wallet_usdt_balance": {
+      "title": "Solana出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDT 未満です。現在の USDT 残高：{balance}"
+    },
+    "solana_withdrawal_wallet_usdc_balance": {
+      "title": "Solana出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDC 未満です。現在の USDC 残高：{balance}"
+    },
+    "solana_withdrawal_wallet_sol_balance": {
+      "title": "Solana出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} SOL 未満です。現在の SOL 残高：{balance}"
+    },
+    "ethereum_withdrawal_wallet_usdt_balance": {
+      "title": "Ethereum出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDT 未満です。現在の USDT 残高：{balance}"
+    },
+    "ethereum_withdrawal_wallet_eth_balance": {
+      "title": "Ethereum出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} ETH 未満です。現在の ETH 残高：{balance}"
+    },
+    "ethereum_withdrawal_wallet_usdc_balance": {
+      "title": "Ethereum出金ウォレット残高警告",
+      "message": "引き出しウォレットの残高が {limit} USDC 未満です。現在の USDC 残高：{balance}"
+    }
+  },
+  "poker_code": {
+    "distributed": {
+      "title": "あなたのポーカーコードが届きました",
+      "message": "次のポーカーコードを受け取りました: {pokerCodes}."
+    }
+  },
+  "tip": {
+    "received": {
+      "title": "チップを受け取りました",
+      "message": "あなたは {amount} USD のチップを {sender} から受け取りました。"
+    }
+  },
+  "reward": {
+    "received": {
+      "title": "報酬を受け取りました",
+      "message": "あなたは {amount} USD の報酬を受け取りました - {description}."
+    }
+  }
+}
